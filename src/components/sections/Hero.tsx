@@ -1,39 +1,64 @@
 import { motion } from 'framer-motion';
-
 import { styles } from '../../constants/styles';
-import { ComputersCanvas } from '../canvas';
 import { config } from '../../constants/config';
 import { Typewriter } from 'react-simple-typewriter';
+import Avatar from './Avatar';
 
 const Hero = () => {
   return (
-    <section className={`mx-auto h-screen w-full`}>
+    <section className="h-screen w-full absolute z-10">
       <div
-        className={`absolute mt-20 inset-0 top-[120px] mx-auto max-w-7xl ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute mt-40 inset-0 top-[120px] mx-auto max-w-7xl  flex flex-row items-start gap-5`}
       >
-        <div className="mt-10 flex flex-col items-center justify-center">
-          <div className={`w-2 h-36 ${styles.gradient} bg-gradient-to-l to-transparent`} />
-        </div>
+        <div className="relative p-3 pb-5 pl-1">
+          {/* Curtain Animation */}
+          <motion.div
+            initial={{ width: '100%', left: '0%' }}
+            animate={{ width: '0%', left: '100%' }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
+            className="absolute inset-0 bg-[#acb8f7] opacity-25"
+            style={{ zIndex: 10 }}
+          />
 
-        <div>
-          <h1 className={`${styles.heroHeadText} pt-4 text-white`}>
-            Hi, I'm <span className="text-[#acb8f7]">{config.hero.name}</span>
-          </h1>
-          <p className={`${styles.heroSubText} text-white-100 mt-2`}>
-            <Typewriter
-              words={['Senior Software Engineer','Full Stack Engineer']}
-              loop={false}
-              cursor
-              cursorStyle="|"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </p>
+          {/* Bottom Border */}
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: '50%' }}
+            transition={{
+              duration: 0.75,
+              ease: 'easeInOut',
+            }}
+            className="absolute bottom-0 left-0 h-1 border-b-2 border-gray-700"
+            style={{ borderBottom: '8px solid #acb8f7', borderRadius: '20%' }}
+          />
+
+          {/* Text Container */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: 'easeInOut', delay: 1 }}
+            className="relative"
+          >
+            <h1 className={`${styles.heroHeadText} pt-4 text-white`}>
+              Hi, I'm <span className="text-[#acb8f7]">{config.hero.name}</span>
+            </h1>
+            <p className={`${styles.heroSubText} text-white-100 mt-2`}>
+              <Typewriter
+                words={['Senior Software Engineer', 'Full Stack Developer', 'AI Enthusiast']}
+                loop={false}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </p>
+          </motion.div>
         </div>
+      <Avatar />
       </div>
 
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
 
       <div className="xs:bottom-10 absolute bottom-32 flex w-full items-center justify-center">
         <a href="#about">
