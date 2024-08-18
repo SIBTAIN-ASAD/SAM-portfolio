@@ -14,15 +14,11 @@ import {
   web,
   javascript,
   typescript,
-  html,
-  css,
   reactjs,
   redux,
   tailwind,
-  nodejs,
   mongodb,
   git,
-  figma,
   docker,
   devsinc,
   Fiverr,
@@ -37,6 +33,7 @@ import {
   pythonMS,
   figmaland,
   tradingtracker,
+  django,
 } from '../assets';
 
 export const navLinks: TNavLink[] = [
@@ -87,16 +84,6 @@ const services: TService[] = [
 
 const technologies: TTechnology[] = [
   {
-    name: 'HTML 5',
-    icon: html,
-    description: 'HTML 5',
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
-    description: 'CSS 3',
-  },
-  {
     name: 'JavaScript',
     icon: javascript,
     description: 'JavaScript',
@@ -122,9 +109,9 @@ const technologies: TTechnology[] = [
     description: 'Tailwind CSS',
   },
   {
-    name: 'Node JS',
-    icon: nodejs,
-    description: 'Node JS',
+    name: 'Django',
+    icon: django,
+    description: 'Django',
   },
   {
     name: 'MongoDB',
@@ -140,11 +127,6 @@ const technologies: TTechnology[] = [
     name: 'Git',
     icon: git,
     description: 'Git',
-  },
-  {
-    name: 'Figma',
-    icon: figma,
-    description: 'Figma',
   },
   {
     name: 'Docker',

@@ -21,6 +21,7 @@ import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
 import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
+import django from './tech/django.png';
 
 import devsinc from './company/devsinc.jpeg';
 import Fiverr from './company/Fiverr.png';
@@ -54,6 +55,7 @@ export {
   mongodb,
   nodejs,
   reactjs,
+  django,
   redux,
   tailwind,
   typescript,
