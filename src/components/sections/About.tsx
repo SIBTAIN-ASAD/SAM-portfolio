@@ -12,31 +12,34 @@ interface IServiceCard {
   index: number;
   title: string;
   icon: string;
+  description: string;
 }
 
-const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon }) => (
+const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon, description }) => (
   <Tilt
-    glareEnable
-    tiltEnable
-    tiltMaxAngleX={30}
-    tiltMaxAngleY={30}
-    glareColor="#aaa6c3"
+    tiltMaxAngleX={0}
+    tiltMaxAngleY={0}
+    glareColor="#000000"
   >
     <div className="xs:w-[250px] w-full">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="green-pink-gradient shadow-card w-full rounded-[20px] p-[1px]"
+        className="shadow-card w-full rounded-[20px] p-[1px] border border-[#131b37] relative"
       >
-        <div className="bg-tertiary flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5">
+        <div className="bg-transparent flex min-h-[280px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5 relative overflow-hidden">
           <img
             src={icon}
             alt="web-development"
             className="h-16 w-16 object-contain"
           />
 
-          <h3 className="text-center text-[20px] font-bold text-white">
+          <h3 className="text-center text-[20px] font-bold text-[#c1caf5]">
             {title}
           </h3>
+
+          <div className="description-overlay">
+            {description}
+          </div>
         </div>
       </motion.div>
     </div>

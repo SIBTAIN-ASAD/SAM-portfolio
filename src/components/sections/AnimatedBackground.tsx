@@ -57,8 +57,17 @@ const AnimatedBackground: React.FC = () => {
   const points = useRef<Point[]>([]);
   const target = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const animateHeader = useRef(true);
+  const animationEnabled = useRef(true);
 
   useEffect(() => {
+    const checkScreenSize = () => {
+      if (window.innerWidth < 768) {
+        animationEnabled.current = false;
+      } else {
+        animationEnabled.current = true;
+      }
+    };
+
     const canvas = canvasRef.current!;
     const largeHeader = largeHeaderRef.current!;
     const ctx = canvas.getContext('2d')!;
@@ -66,7 +75,7 @@ const AnimatedBackground: React.FC = () => {
     const initHeader = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-      target.current = { x: width / 0.75, y: height / 5 };
+      target.current = { x: width / 3, y: height / 1.2 };
 
       largeHeader.style.height = height + 'px';
       canvas.width = width;
@@ -89,6 +98,7 @@ const AnimatedBackground: React.FC = () => {
     };
 
     const mouseMove = (e: MouseEvent) => {
+      if (!animationEnabled.current) return;
       let posx = 0,
         posy = 0;
       if (e.pageX || e.pageY) {
@@ -103,10 +113,12 @@ const AnimatedBackground: React.FC = () => {
     };
 
     const scrollCheck = () => {
+      if (!animationEnabled.current) return;
       animateHeader.current = document.body.scrollTop <= window.innerHeight;
     };
 
     const resize = () => {
+      checkScreenSize();
       const width = window.innerWidth;
       const height = window.innerHeight;
       largeHeader.style.height = height + 'px';
@@ -115,6 +127,7 @@ const AnimatedBackground: React.FC = () => {
     };
 
     const drawLines = (p: Point) => {
+      if (!animationEnabled.current) return;
       for (let i = 0; i < points.current.length; i++) {
         const distance = getDistance(p, points.current[i]);
         if (distance < 4000 && p.active > 0) {
@@ -132,6 +145,7 @@ const AnimatedBackground: React.FC = () => {
     };
 
     const shiftPoint = (p: Point) => {
+      if (!animationEnabled.current) return;
       gsap.to(p, {
         duration: 1 + 1 * Math.random(),
         x: p.originX - 50 + Math.random() * 100,
@@ -144,7 +158,7 @@ const AnimatedBackground: React.FC = () => {
     };
 
     const animate = () => {
-      if (animateHeader.current) {
+      if (animationEnabled.current && animateHeader.current) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         const targetPoint = new Point({ x: target.current.x, y: target.current.y });
         for (let i = 0; i < points.current.length; i++) {
@@ -184,8 +198,11 @@ const AnimatedBackground: React.FC = () => {
       window.addEventListener('resize', resize);
     };
 
+    checkScreenSize();
     initHeader();
-    initAnimation();
+    if (animationEnabled.current) {
+      initAnimation();
+    }
     addListeners();
 
     return () => {

@@ -2,6 +2,7 @@ export type TCommonProps = {
   title?: string;
   name?: string;
   icon?: string;
+  description?: string;
 };
 
 export type TExperience = {
