@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { styles } from '../../constants/styles';
 import { fadeIn } from '../../utils/motion';
 import { testimonials } from '../../constants';
@@ -14,37 +15,57 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
   designation,
   company,
   image,
-}) => (
-  <motion.div
-    variants={fadeIn('', 'spring', index * 0.5, 0.75)}
-    className="bg-black-200 w-full rounded-3xl p-10"
-  >
-    <p className="text-[48px] font-black text-white">"</p>
+}) => {
+  return (
+    <motion.div
+      variants={fadeIn('', 'spring', index * 0.5, 0.75)}
+      className="bg-black w-72 min-w-72 h-72 rounded-3xl p-6 shadow-lg flex-shrink-0 overflow-auto"
+    >
+      <p className="text-[24px] font-black text-white">"</p>
 
-    <div className="mt-1">
-      <p className="text-[18px] tracking-wider text-white">{testimonial}</p>
+      <div className="mt-1">
+        <p className="text-[14px] tracking-wider text-white overflow-auto h-28">
+          {testimonial}
+        </p>
 
-      <div className="mt-7 flex items-center justify-between gap-1">
-        <div className="flex flex-1 flex-col">
-          <p className="text-[16px] font-medium text-white">
-            <span className="blue-text-gradient">@</span> {name}
-          </p>
-          <p className="text-secondary mt-1 text-[12px]">
-            {designation} of {company}
-          </p>
+        <div className="mt-7 flex items-center justify-between gap-1">
+          <div className="flex flex-1 flex-col">
+            <p className="text-[16px] font-medium text-white">
+              <span className="blue-text-gradient">@</span> {name}
+            </p>
+            <p className="text-secondary mt-1 text-[12px]">
+              {designation} of {company}
+            </p>
+          </div>
+
+          <img
+            src={image}
+            alt={`feedback_by-${name}`}
+            className="h-12 w-12 rounded-full border border-gray-300 object-cover"
+          />
         </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className="h-10 w-10 rounded-full object-cover"
-        />
       </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
 const Feedbacks = () => {
+  const controls = useAnimation();
+
+  // Animation properties
+  const animationProps = {
+    x: ['0%', '-100%'],
+    transition: { repeat: Infinity, duration: 30, ease: 'linear' },
+  };
+
+  const handleMouseEnter = () => {
+    controls.stop(); 
+  };
+
+  const handleMouseLeave = () => {
+    controls.start(animationProps);
+  };
+
   return (
     <div className="relative bg-black-100 w-full overflow-hidden rounded-[20px]">
       <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
@@ -55,11 +76,13 @@ const Feedbacks = () => {
       <div className="relative border-t-4 w-full border-gray-700">
         <div className="absolute top-0 left-0 w-full  h-full pointer-events-none"></div>
         <motion.div
-          animate={{ x: ['0%', '-100%'] }}
-          transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
+          animate={controls}
+          initial={{ x: '0%' }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className="flex gap-7"
         >
-          {(testimonials).map((testimonial, index) => (
+          {testimonials.map((testimonial, index) => (
             <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
           ))}
         </motion.div>

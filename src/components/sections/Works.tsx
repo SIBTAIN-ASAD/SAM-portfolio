@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { carrent, github } from '../../assets';
+import { github } from '../../assets';
 import { Header } from '../atoms/Header';
 import { SectionWrapper } from '../../hoc';
 import { config } from '../../constants/config';
@@ -13,7 +13,8 @@ const ProjectCard: React.FC<{
   description: string;
   tags: { name: string; color: string }[];
   current: string;
-}> = ({ index, name, description, tags, current }) => {
+  githubLink?: string;
+}> = ({ index, name, description, tags, current, githubLink }) => {
   return (
     <motion.div
       variants={fadeIn('up', 'spring', index * 0.5, 0.75)}
@@ -23,19 +24,17 @@ const ProjectCard: React.FC<{
         <img
           src={current}
           alt={name}
-          className="h-full w-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-105 filter brightness-75"
         />
         <div className="absolute p-2 inset-0 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm opacity-0 transition-opacity duration-500 ease-in-out hover:opacity-100">
           <div className="text-center p-2 h-full border rounded-md text-white">
             <a
-              href={current}
+              href={githubLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center text-sm text-white"
             >
-              <img src={github}
-              className='h-10 w-10 my-6 hover:scale-110'
-               alt="" />
+              <img src={github} className="h-10 w-10 my-6 hover:scale-110" alt="" />
             </a>
 
             <p className="mb-4 text-sm text-left">{description}</p>
@@ -50,7 +49,7 @@ const ProjectCard: React.FC<{
         </div>
       </div>
       <div className="p-2 flex flex-wrap gap-2 ">
-        <p className="text-lg font-bold">{name}</p>
+        <p className="text-lg text-[#535C91] font-bold">{name}</p>
       </div>
     </motion.div>
   );
@@ -72,7 +71,13 @@ const Works = () => {
 
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard current={carrent} key={`project-${index}`} index={index} {...project} />
+          <ProjectCard
+            current={project.image}
+            key={`project-${index}`}
+            index={index}
+            githubLink={project.sourceCodeLink}
+            {...project}
+          />
         ))}
       </div>
     </>

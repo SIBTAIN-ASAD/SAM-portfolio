@@ -37,7 +37,7 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon, description }
             {title}
           </h3>
 
-          <div className="description-overlay">
+          <div className="description-overlay text-left">
             {description}
           </div>
         </div>

@@ -19,20 +19,18 @@ const emailjsConfig = {
 };
 
 const Contact = () => {
-  const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
+  const formRef = useRef(null);
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
-  ) => {
-    if (e === undefined) return;
+  // @ts-ignore
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
-    if (e === undefined) return;
+  // @ts-ignore
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
@@ -53,14 +51,12 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm(INITIAL_STATE);
+          setForm(INITIAL_STATE); 
         },
         (error) => {
           setLoading(false);
-
-          console.log(error);
-          alert("Something went wrong.");
+          console.error("EmailJS Error:", error);
+          alert("Something went wrong. Please try again.");
         }
       );
   };
@@ -75,12 +71,7 @@ const Contact = () => {
       >
         <Header useMotion={false} {...config.contact} />
 
-        <form
-          // @ts-expect-error
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
-        >
+        <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
           {Object.keys(config.contact.form).map((input) => {
             const { span, placeholder } =
               config.contact.form[input as keyof typeof config.contact.form];
@@ -92,11 +83,11 @@ const Contact = () => {
                 <Component
                   type={input === "email" ? "email" : "text"}
                   name={input}
-                  value={form[`${input}`]}
+                  value={form[input]}
                   onChange={handleChange}
                   placeholder={placeholder}
                   className="bg-transparent border-2 border-gray-700 placeholder:text-secondary rounded-lg px-6 py-4 font-medium text-white outline-none"
-                  {...(input === "message" && { rows: 7 })}
+                  rows={input === "message" ? 7 : undefined} // Adds rows if it's a textarea
                 />
               </label>
             );

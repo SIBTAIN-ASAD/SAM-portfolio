@@ -27,8 +27,16 @@ import {
   devsinc,
   Fiverr,
   i2c,
-  carrent,
+  healthcare,
   threejs,
+  quora,
+  splitwise,
+  hams,
+  nexus,
+  burger,
+  pythonMS,
+  figmaland,
+  tradingtracker,
 } from '../assets';
 
 export const navLinks: TNavLink[] = [
@@ -191,47 +199,185 @@ const experiences: TExperience[] = [
 const testimonials: TTestimonial[] = [
   {
     testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Sibtain proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser.me/api/portraits/women/4.jpg',
+      'I highly recommend this exceptional service provider! Their professionalism and kindness were evident throughout the entire process. Not only did they complete the service well before the deadline, but their consistent and prompt communication made the experience seamless. If you are looking for reliability, efficiency, and a positive attitude, this is the person.',
+    name: 'Adi Nahmani',
+    designation: 'Client',
+    company: 'Israel',
+    image: 'https://randomuser.me/api/portraits/men/1.jpg',
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Sibtain does.",
-    name: 'Chris Brown',
-    designation: 'COO',
-    company: 'DEF Corp',
+      'He was very understanding of my time constraint. Very quick to get back to me. I appreciate his attention to detail, especially in such a short time. I would recommend this man time and time again if possible.',
+    name: 'Jaymi Anderson',
+    designation: 'Client',
+    company: 'United States',
+    image: 'https://randomuser.me/api/portraits/women/2.jpg',
+  },
+  {
+    testimonial:
+      'It was an absolute pleasure working with Sibtain! He was very proactive in communication and was able to solve my needs in a very prompt manner. Will definitely work with him in the future and recommend him to anyone requiring assistance with a project.',
+    name: 'Hasheem Johnson',
+    designation: 'Client',
+    company: 'United States',
+    image: 'https://randomuser.me/api/portraits/men/3.jpg',
+  },
+  {
+    testimonial:
+      'I wanted to express my appreciation for your exceptional work as a programmer. Your coding skills and attention to detail have significantly contributed to the success of our projects. Keep up the excellent work!',
+    name: 'Mortuus Schmidt',
+    designation: 'Client',
+    company: 'Germany',
+    image: 'https://randomuser.me/api/portraits/men/4.jpg',
+  },
+  {
+    testimonial:
+      'Had a very lengthy project that helped complete in a very short time period! 10/10 would recommend.',
+    name: 'Haris Tiwana',
+    designation: 'Client',
+    company: 'Pakistan',
     image: 'https://randomuser.me/api/portraits/men/5.jpg',
   },
   {
     testimonial:
-      "After Sibtain optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: 'Lisa Wang',
-    designation: 'CTO',
-    company: '456 Enterprises',
+      'Very good seller. Always communicates and does the job on time. I would recommend buying services from this seller if you have coding work like a project and so on. I am very satisfied.',
+    name: 'Rida San',
+    designation: 'Client',
+    company: 'Malaysia',
     image: 'https://randomuser.me/api/portraits/women/6.jpg',
   },
   {
     testimonial:
-      'Sibtain is a true professional. They delivered our project on time and within budget.',
-    name: 'John Doe',
-    designation: 'CEO',
-    company: 'XYZ Corp',
-    image: 'https://randomuser.me/api/portraits',
+      'One of the best guys on Fiverr. I had very particular requirements for my project, and he was able to help no matter what. His skills are very good, and the final project looked great. He delivered the project much quicker than the deadline set and responded within an hour of all my messages. Any feedback or revisions I had, he was always quick to fix them. Overall, 10/10 would definitely book from him again.',
+    name: 'Harry Stewart',
+    designation: 'Client',
+    company: 'United Kingdom',
+    image: 'https://randomuser.me/api/portraits/men/7.jpg',
   },
   {
     testimonial:
-      'I thought it was impossible to make a website as beautiful as our product, but Sibtain proved me wrong.',
-    name: 'Sara Lee',
-    designation: 'CFO',
-    company: 'Acme Co',
-    image: 'https://randomuser',
-  }
+      "Very friendly and respectful guy, works quickly and efficiently. For my first Fiverr order, I'm very satisfied! I was in a hurry with my task, so he helped me out and did the task within two or fewer hours. Thanks for the work, Sibtain, you are the best, mate!",
+    name: 'Karl Rahn',
+    designation: 'Client',
+    company: 'Estonia',
+    image: 'https://randomuser.me/api/portraits/men/8.jpg',
+  },
+  {
+    testimonial:
+      "I was on an extremely tight deadline and had no idea what to do, but the seller was amazingly helpful. I will use him again, and I definitely recommend you do too, because he made it perfect on the first try. I can't thank him enough.",
+    name: 'Zachary Power',
+    designation: 'Client',
+    company: 'United States',
+    image: 'https://randomuser.me/api/portraits/men/9.jpg',
+  },
+  {
+    testimonial:
+      'Everything is done in the best and most professional manner. Received everything before the deadline. I really recommend this specialist!',
+    name: 'Oleksandr Shosta',
+    designation: 'Client',
+    company: 'United Kingdom',
+    image: 'https://randomuser.me/api/portraits/men/10.jpg',
+  },
 ];
 
+
 const projects: TProject[] = [
+  {
+    name: 'Quora Clone',
+    description:
+      'A platform allowing users to ask questions, answer, and interact with a community, mimicking the core functionalities of Quora.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'django',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'RESTful APIs',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: quora,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/quora/',
+  },
+  {
+    name: 'Splitwise',
+    description:
+      'A collaborative expense management application enabling users to split bills and track expenses among a group.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'firebase',
+        color: 'green-text-gradient',
+      },
+    ],
+    image: splitwise,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/splitwise/tree/feature/Dashboard/',
+  },
+  {
+    name: 'Invesment Tracker',
+    description:
+      'InvestmentTracker is a web application designed to help users manage and track their investments in stocks, ETFs, and cryptocurrencies.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'redux',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'PostgreSQL',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Django REST',
+        color: 'green-text-gradient',
+      },
+    ],
+    image: tradingtracker,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/Trading-Tracker',
+  },
+  {
+    name: 'HAMS',
+    description:
+      'A hospital appointment management system designed to streamline the appointment booking process and enhance patient experience.',
+    tags: [
+      {
+        name: 'php',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: hams,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/HAMS',
+  },
+  {
+    name: 'NexusIn',
+    description:
+      'A social networking website developed using the MERN stack, featuring components such as Feed, Chat, Friends, Jobs, and Admin Site.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'nodejs',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'mongodb',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: nexus,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/',
+  },
   {
     name: 'Healthcare Project',
     description:
@@ -250,75 +396,45 @@ const projects: TProject[] = [
         color: 'pink-text-gradient',
       },
     ],
-    image: carrent, // Add appropriate image for this project
-    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
+    image: healthcare,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/',
   },
   {
-    name: 'Quora Clone',
+    name: 'React Burger App',
     description:
-      'A platform allowing users to ask questions, answer, and interact with a community, mimicking the core functionalities of Quora.',
+      'A web application allowing users to build and order custom burgers, showcasing the use of React, Redux, and Firebase.',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'django',
+        name: 'redux',
         color: 'green-text-gradient',
-      },
-    ],
-    image: carrent, // Add appropriate image for this project
-    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
-  },
-  {
-    name: 'Splitwise',
-    description:
-      'A collaborative expense management application enabling users to split bills and track expenses among a group.',
-    tags: [
-      {
-        name: 'react',
-        color: 'blue-text-gradient',
       },
       {
         name: 'firebase',
-        color: 'green-text-gradient',
+        color: 'pink-text-gradient',
       },
     ],
-    image: carrent, // Add appropriate image for this project
-    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
+    image: burger,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/react-burger',
   },
   {
-    name: 'FCIT Help Desk',
+    name: 'Figma Land Website',
     description:
-      'A guidance application for FCIT students designed to provide information and support for academic and administrative queries.',
+      'A responsive website designed using Figma, showcasing the use of modern design principles and best practices.',
     tags: [
       {
-        name: 'react',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'django',
-        color: 'green-text-gradient',
-      },
-    ],
-    image: carrent, // Add appropriate image for this project
-    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
-  },
-  {
-    name: 'NexusIn',
-    description:
-      'A social networking website developed using the MERN stack, featuring components such as Feed, Chat, Friends, Jobs, and Admin Site.',
-    tags: [
-      {
-        name: 'mern',
+        name: 'bootstrap',
         color: 'blue-text-gradient',
       },
     ],
-    image: carrent, // Add appropriate image for this project
-    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
+    image: figmaland,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/FigmaLand-ui-assignment',
   },
   {
-    name: 'Library MS',
+    name: 'Flight Management System',
     description:
       'A console application showcasing the use of OOP concepts and file handling for managing library records and operations.',
     tags: [
@@ -327,10 +443,9 @@ const projects: TProject[] = [
         color: 'blue-text-gradient',
       },
     ],
-    image: carrent, // Add appropriate image for this project
-    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
+    image: pythonMS,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/Flight-MS-Python',
   },
 ];
-
 
 export { services, technologies, experiences, testimonials, projects };

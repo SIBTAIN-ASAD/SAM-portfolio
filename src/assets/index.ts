@@ -26,9 +26,15 @@ import devsinc from './company/devsinc.jpeg';
 import Fiverr from './company/Fiverr.png';
 import i2c from './company/i2c.png';
 
-import carrent from './carrent.png';
-import jobit from './jobit.png';
-import tripguide from './tripguide.png';
+import healthcare from './healthcare.png';
+import quora from './quora.png';
+import splitwise from './splitwise.png';
+import hams from './hams.png';
+import nexus from './nexusin.jpeg';
+import burger from './burger.png';
+import pythonMS from './python.png';
+import figmaland from './figmaland.png';
+import tradingtracker from './tradingtracker.png';
 
 export {
   logo,
@@ -55,8 +61,14 @@ export {
   devsinc,
   Fiverr,
   i2c,
-  carrent,
-  jobit,
-  tripguide,
+  healthcare,
+  quora,
+  splitwise,
   avatar,
+  hams,
+  nexus,
+  burger,
+  pythonMS,
+  figmaland,
+  tradingtracker,
 };
