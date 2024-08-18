@@ -13,6 +13,7 @@ import {
   Works,
 } from './components';
 import AnimatedBackground from './components/sections/AnimatedBackground';
+import Footer from './components/layout/Footer';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -37,6 +38,7 @@ const App: React.FC = () => {
           <StarsCanvas />
         </div>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 };

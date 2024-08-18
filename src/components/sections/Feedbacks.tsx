@@ -49,7 +49,7 @@ const Feedbacks = () => {
     <div className="relative bg-black-100 w-full overflow-hidden rounded-[20px]">
       <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
       <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
-      <div className={`${styles.paddingX} py-2  ml-40`}>
+      <div className={`${styles.paddingX} py-2  ml-52`}>
         <Header useMotion={true} {...config.sections.feedbacks} />
       </div>
       <div className="relative border-t-4 w-full border-gray-700">

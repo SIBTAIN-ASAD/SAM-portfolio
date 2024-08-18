@@ -14,7 +14,7 @@ const INITIAL_STATE = Object.fromEntries(
 
 const emailjsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  templateId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
   accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
 };
 
@@ -71,7 +71,7 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="bg-black-100 flex-[0.75] rounded-2xl p-8"
+        className="bg-transparent flex-[0.75] rounded-2xl p-8 pb-4 mb-4 border-2 border-gray-700"
       >
         <Header useMotion={false} {...config.contact} />
 
@@ -95,7 +95,7 @@ const Contact = () => {
                   value={form[`${input}`]}
                   onChange={handleChange}
                   placeholder={placeholder}
-                  className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                  className="bg-transparent border-2 border-gray-700 placeholder:text-secondary rounded-lg px-6 py-4 font-medium text-white outline-none"
                   {...(input === "message" && { rows: 7 })}
                 />
               </label>
@@ -103,7 +103,7 @@ const Contact = () => {
           })}
           <button
             type="submit"
-            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none"
+            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none hover:shadow-lg hover:bg-opacity-80"
           >
             {loading ? "Sending..." : "Send"}
           </button>
