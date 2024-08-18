@@ -3,7 +3,7 @@ import devops from './devops.svg';
 import ai from './ai.svg';
 import sa from './sa.svg';
 import web from './web.svg';
-import github from './github.png';
+import github from './github.svg';
 import menu from './menu.svg';
 import close from './close.svg';
 import avatar from './avatarSE.svg';
@@ -23,7 +23,6 @@ import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
 
 import devsinc from './company/devsinc.jpeg';
-import shopify from './company/shopify.png';
 import Fiverr from './company/Fiverr.png';
 import i2c from './company/i2c.png';
 
@@ -54,7 +53,6 @@ export {
   typescript,
   threejs,
   devsinc,
-  shopify,
   Fiverr,
   i2c,
   carrent,

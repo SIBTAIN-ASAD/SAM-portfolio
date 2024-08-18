@@ -1,15 +1,19 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import { styles } from "../constants/styles";
+import { styles } from '../constants/styles';
 
 interface Props {
   Component: React.ElementType;
   idName: string;
+  width?: string;
+  padding?: string;
 }
 
 const SectionWrapper = (
-  Component: Props["Component"],
-  idName: Props["idName"]
+  Component: Props['Component'],
+  idName: Props['idName'],
+  width?: string,
+  padding?: string
 ) =>
   function HOC() {
     return (
@@ -17,7 +21,7 @@ const SectionWrapper = (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className={`${styles.padding} relative z-0 mx-auto max-w-7xl`}
+        className={`${padding ? padding : styles.paddingX} relative z-0 mx-auto ${width ? width : 'max-w-7xl'}`}
         id={idName}
       >
         <span className="hash-span">&nbsp;</span>

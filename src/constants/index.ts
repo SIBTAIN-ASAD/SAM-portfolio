@@ -28,8 +28,6 @@ import {
   Fiverr,
   i2c,
   carrent,
-  jobit,
-  tripguide,
   threejs,
 } from '../assets';
 
@@ -41,6 +39,10 @@ export const navLinks: TNavLink[] = [
   {
     id: 'work',
     title: 'Work',
+  },
+  {
+    id: 'feedback',
+    title: 'Testimonials',
   },
   {
     id: 'contact',
@@ -211,72 +213,124 @@ const testimonials: TTestimonial[] = [
     company: '456 Enterprises',
     image: 'https://randomuser.me/api/portraits/women/6.jpg',
   },
+  {
+    testimonial:
+      'Sibtain is a true professional. They delivered our project on time and within budget.',
+    name: 'John Doe',
+    designation: 'CEO',
+    company: 'XYZ Corp',
+    image: 'https://randomuser.me/api/portraits',
+  },
+  {
+    testimonial:
+      'I thought it was impossible to make a website as beautiful as our product, but Sibtain proved me wrong.',
+    name: 'Sara Lee',
+    designation: 'CFO',
+    company: 'Acme Co',
+    image: 'https://randomuser',
+  }
 ];
 
 const projects: TProject[] = [
   {
-    name: 'Car Rent',
+    name: 'Healthcare Project',
     description:
-      'Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.',
+      'A comprehensive healthcare management system designed to optimize patient data management and enhance operational efficiency.',
+    tags: [
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'mui',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'ms-dynamics',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: carrent, // Add appropriate image for this project
+    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
+  },
+  {
+    name: 'Quora Clone',
+    description:
+      'A platform allowing users to ask questions, answer, and interact with a community, mimicking the core functionalities of Quora.',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'django',
         color: 'green-text-gradient',
       },
-      {
-        name: 'tailwind',
-        color: 'pink-text-gradient',
-      },
     ],
-    image: carrent,
-    sourceCodeLink: 'https://github.com/',
+    image: carrent, // Add appropriate image for this project
+    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
   },
   {
-    name: 'Job IT',
+    name: 'Splitwise',
     description:
-      'Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.',
+      'A collaborative expense management application enabling users to split bills and track expenses among a group.',
     tags: [
       {
         name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'firebase',
         color: 'green-text-gradient',
       },
-      {
-        name: 'scss',
-        color: 'pink-text-gradient',
-      },
     ],
-    image: jobit,
-    sourceCodeLink: 'https://github.com/',
+    image: carrent, // Add appropriate image for this project
+    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
   },
   {
-    name: 'Trip Guide',
+    name: 'FCIT Help Desk',
     description:
-      'A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.',
+      'A guidance application for FCIT students designed to provide information and support for academic and administrative queries.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'react',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'django',
         color: 'green-text-gradient',
       },
+    ],
+    image: carrent, // Add appropriate image for this project
+    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
+  },
+  {
+    name: 'NexusIn',
+    description:
+      'A social networking website developed using the MERN stack, featuring components such as Feed, Chat, Friends, Jobs, and Admin Site.',
+    tags: [
       {
-        name: 'css',
-        color: 'pink-text-gradient',
+        name: 'mern',
+        color: 'blue-text-gradient',
       },
     ],
-    image: tripguide,
-    sourceCodeLink: 'https://github.com/',
+    image: carrent, // Add appropriate image for this project
+    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
+  },
+  {
+    name: 'Library MS',
+    description:
+      'A console application showcasing the use of OOP concepts and file handling for managing library records and operations.',
+    tags: [
+      {
+        name: 'python',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: carrent, // Add appropriate image for this project
+    sourceCodeLink: 'https://github.com/', // Add actual source code link if available
   },
 ];
+
 
 export { services, technologies, experiences, testimonials, projects };

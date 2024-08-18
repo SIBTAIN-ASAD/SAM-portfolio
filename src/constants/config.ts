@@ -74,13 +74,13 @@ export const config: TConfig = {
       h2: "Professional Experience.",
     },
     feedbacks: {
-      p: "What others say",
+      p: "Feedback from Others",
       h2: "Testimonials.",
     },
     works: {
-      p: "My work",
+      p: "Professional Background",
       h2: "Projects.",
-      content: `Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to code repositories and live demos. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.`,
+      content: `I have worked on a variety of projects, including a full-stack e-commerce platform, a Django REST API, and a React-based web application. I have also developed a reinforcement learning model for an AI game player and deployed it on AWS. My work has been recognized by clients and colleagues alike for its quality and innovation.`,
     },
   },
 };
