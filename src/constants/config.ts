@@ -70,8 +70,8 @@ export const config: TConfig = {
       content: `I'm a skilled software developer with experience in TypeScript and JavaScript, specializing in React, Django, and REST. I excel in coding, problem-solving, and software design. Additionally, I have proficiency in AI, particularly reinforcement learning using TensorFlow and PyTorch, and experience with OpenAI Gym environments for experimentation. With a background in AWS, Azure, and Google Cloud Platform, I can architect scalable AI solutions in the cloud.`,
     },
     experience: {
-      p: "What I have done so far",
-      h2: "Work Experience.",
+      p: "Accomplishments to Date",
+      h2: "Professional Experience.",
     },
     feedbacks: {
       p: "What others say",

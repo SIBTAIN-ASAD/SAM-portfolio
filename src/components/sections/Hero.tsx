@@ -55,25 +55,40 @@ const Hero = () => {
             </p>
           </motion.div>
         </div>
-      <Avatar />
+        <Avatar />
       </div>
 
       {/* <ComputersCanvas /> */}
 
       <div className="bottom-10 absolute flex w-full items-center justify-center">
         <a href="#about">
-          <div className="border-secondary flex h-[64px] w-[35px] items-start justify-center rounded-3xl border-4 p-2 opacity-50">
+          <div className="opacity-50">
             <motion.div
               animate={{
-                y: [0, 24, 0],
+                y: [0, 15, 0],
               }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: 'loop',
               }}
-              className="bg-secondary mb-1 h-3 w-3 rounded-full"
-            />
+              className="flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                className="h-6 w-6 text-secondary"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="4"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </motion.div>
           </div>
         </a>
       </div>

@@ -1,47 +1,36 @@
-import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import React, { useEffect, useRef, useState } from 'react';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import { experiences } from '../../constants';
+import { SectionWrapper } from '../../hoc';
+import { Header } from '../atoms/Header';
+import { TExperience } from '../../types';
+import { config } from '../../constants/config';
 
-import "react-vertical-timeline-component/style.min.css";
-
-import { experiences } from "../../constants";
-import { SectionWrapper } from "../../hoc";
-import { Header } from "../atoms/Header";
-import { TExperience } from "../../types";
-import { config } from "../../constants/config";
-
-const ExperienceCard: React.FC<TExperience> = (experience) => {
+const ExperienceCard: React.FC<TExperience> = experience => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
-        color: "#fff",
+        background: '#070F2B',
+        color: '#c1caf5',
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentArrowStyle={{ borderRight: '7px solid  #c1caf5' }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex h-full w-full items-center justify-center">
+        <div className="h-full w-full">
           <img
             src={experience.icon}
             alt={experience.companyName}
-            className="h-[60%] w-[60%] object-contain"
+            className="h-full w-full object-cover rounded-full"
           />
         </div>
       }
     >
-      <div>
-        <h3 className="text-[24px] font-bold text-white">{experience.title}</h3>
-        <p
-          className="text-secondary text-[16px] font-semibold"
-          style={{ margin: 0 }}
-        >
-          {experience.companyName}
-        </p>
-      </div>
-
+      <h3 className="text-[24px] font-bold text-white">{experience.title}</h3>
+      <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
+        {experience.companyName}
+      </p>
       <ul className="ml-5 mt-5 list-disc space-y-2">
         {experience.points.map((point, index) => (
           <li
@@ -56,12 +45,37 @@ const ExperienceCard: React.FC<TExperience> = (experience) => {
   );
 };
 
+
 const Experience = () => {
+  const timelineRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    if (!timelineRef.current) return;
+    const observer = new IntersectionObserver(
+      entries => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        } 
+      },
+      { threshold: 0.3 }
+    );
+
+    if (timelineRef.current) {
+      observer.observe(timelineRef.current);
+    }
+  }, []);
+
   return (
     <>
       <Header useMotion={true} {...config.sections.experience} />
 
-      <div className="mt-20 flex flex-col">
+      <div
+        ref={timelineRef}
+        className={`mt-20 flex flex-col ${isInView ? 'animate-timeline' : ''}`}
+      >
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} {...experience} />
@@ -72,4 +86,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default SectionWrapper(Experience, 'work');
