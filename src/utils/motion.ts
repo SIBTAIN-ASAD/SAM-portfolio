@@ -1,5 +1,7 @@
 import type { TMotion } from "../types";
 import { Variants } from "framer-motion";
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export const textVariant = () => {
   return {
@@ -89,3 +91,9 @@ export const slideIn = (
     },
   };
 };
+
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+

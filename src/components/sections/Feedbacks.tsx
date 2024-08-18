@@ -1,15 +1,13 @@
-import React from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
 import { styles } from '../../constants/styles';
-import { fadeIn } from '../../utils/motion';
 import { testimonials } from '../../constants';
 import { Header } from '../atoms/Header';
 import { TTestimonial } from '../../types';
 import { config } from '../../constants/config';
 import { SectionWrapper } from '../../hoc';
+import { cn } from '../../utils/motion';
 
 const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
-  index,
   testimonial,
   name,
   designation,
@@ -17,10 +15,7 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
   image,
 }) => {
   return (
-    <motion.div
-      variants={fadeIn('', 'spring', index * 0.5, 0.75)}
-      className="bg-black w-72 min-w-72 h-72 rounded-3xl p-6 shadow-lg flex-shrink-0 overflow-auto"
-    >
+    <div className="w-[350px] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-700 bg-black px-8 py-6">
       <p className="text-[24px] font-black text-white">"</p>
 
       <div className="mt-1">
@@ -45,47 +40,46 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
 const Feedbacks = () => {
-  const controls = useAnimation();
+  const [isHovering, setIsHovering] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  // Animation properties
-  const animationProps = {
-    x: ['0%', '-100%'],
-    transition: { repeat: Infinity, duration: 30, ease: 'linear' },
-  };
-
-  const handleMouseEnter = () => {
-    controls.stop(); 
-  };
-
-  const handleMouseLeave = () => {
-    controls.start(animationProps);
-  };
+  useEffect(() => {
+    const container = containerRef.current;
+    if (container) {
+      if (isHovering) {
+        container.style.animationPlayState = 'paused'; // Pause the animation on hover
+      } else {
+        container.style.animationPlayState = 'running'; // Resume the animation immediately
+      }
+    }
+  }, [isHovering]);
 
   return (
     <div className="relative bg-black-100 w-full overflow-hidden rounded-[20px]">
       <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
       <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
-      <div className={`${styles.paddingX} py-2  ml-52`}>
+      <div className={`${styles.paddingX} py-2 ml-52`}>
         <Header useMotion={true} {...config.sections.feedbacks} />
       </div>
       <div className="relative border-t-4 w-full border-gray-700">
-        <div className="absolute top-0 left-0 w-full  h-full pointer-events-none"></div>
-        <motion.div
-          animate={controls}
-          initial={{ x: '0%' }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className="flex gap-7"
+        <div
+          ref={containerRef}
+          className={cn(
+            "flex gap-7 py-4 w-max overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+            "animate-scroll"
+          )}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
         >
           {testimonials.map((testimonial, index) => (
             <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
