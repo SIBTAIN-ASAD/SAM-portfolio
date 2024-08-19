@@ -315,11 +315,11 @@ const projects: TProject[] = [
         color: 'green-text-gradient',
       },
       {
-        name: 'PostgreSQL',
+        name: 'PSQL',
         color: 'blue-text-gradient',
       },
       {
-        name: 'Django REST',
+        name: 'DRF',
         color: 'green-text-gradient',
       },
     ],
