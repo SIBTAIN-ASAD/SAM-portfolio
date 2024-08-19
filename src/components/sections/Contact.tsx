@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { SectionWrapper } from "../../hoc";
@@ -86,7 +86,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder={placeholder}
                   className="bg-transparent border-2 border-gray-700 placeholder:text-secondary rounded-lg px-6 py-4 font-medium text-white outline-none"
-                  rows={input === "message" ? 7 : undefined} // Adds rows if it's a textarea
+                  rows={input === "message" ? 7 : undefined} 
                 />
               </label>
             );
@@ -104,7 +104,6 @@ const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
       >
-        {/* <EarthCanvas /> */}
        <GlobeDemo />
       </motion.div>
     </div>

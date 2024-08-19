@@ -1,5 +1,7 @@
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
+import { Suspense } from 'react';
+import { Loader } from '@react-three/drei';
 
 const World = dynamic(() => import('./Globe').then(m => m.World), {
   ssr: false,
@@ -393,6 +395,7 @@ export function GlobeDemo() {
   ];
 
   return (
+    <Suspense fallback={<Loader/>}>
     <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto relative w-full">
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
         <motion.div
@@ -419,5 +422,6 @@ export function GlobeDemo() {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 }

@@ -1,21 +1,17 @@
-import logo from './logo.png';
-import devops from './devops.svg';
-import ai from './ai.svg';
-import sa from './sa.svg';
-import web from './web.svg';
-import github from './github.svg';
-import menu from './menu.svg';
-import close from './close.svg';
-import avatar from './avatarSE.svg';
+import logo from './icons/logo.png';
+import devops from './icons/devops.svg';
+import ai from './icons/ai.svg';
+import sa from './icons/sa.svg';
+import web from './icons/web.svg';
+import github from './icons/github.svg';
+import menu from './icons/menu.svg';
+import close from './icons/close.svg';
+import avatar from './icons/avatarSE.svg';
 
-import css from './tech/css.png';
 import docker from './tech/docker.png';
-import figma from './tech/figma.png';
 import git from './tech/git.png';
-import html from './tech/html.png';
 import javascript from './tech/javascript.png';
 import mongodb from './tech/mongodb.png';
-import nodejs from './tech/nodejs.png';
 import reactjs from './tech/reactjs.png';
 import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
@@ -27,15 +23,15 @@ import devsinc from './company/devsinc.jpeg';
 import Fiverr from './company/Fiverr.png';
 import i2c from './company/i2c.png';
 
-import healthcare from './healthcare.png';
-import quora from './quora.png';
-import splitwise from './splitwise.png';
-import hams from './hams.png';
-import nexus from './nexusin.jpeg';
-import burger from './burger.png';
-import pythonMS from './python.png';
-import figmaland from './figmaland.png';
-import tradingtracker from './tradingtracker.png';
+import healthcare from './projects/healthcare.png';
+import quora from './projects/quora.png';
+import splitwise from './projects/splitwise.png';
+import hams from './projects/hams.png';
+import nexus from './projects/nexusin.jpeg';
+import burger from './projects/burger.png';
+import pythonMS from './projects/python.png';
+import figmaland from './projects/figmaland.png';
+import tradingtracker from './projects/tradingtracker.png';
 
 export {
   logo,
@@ -46,14 +42,10 @@ export {
   github,
   menu,
   close,
-  css,
   docker,
-  figma,
   git,
-  html,
   javascript,
   mongodb,
-  nodejs,
   reactjs,
   django,
   redux,
