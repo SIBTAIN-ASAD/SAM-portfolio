@@ -14,6 +14,7 @@ import {
 } from './components';
 import AnimatedBackground from './components/sections/AnimatedBackground';
 import Footer from './components/layout/Footer';
+import { useMediaQuery } from 'react-responsive';
 
 const App: React.FC = () => {
   useEffect(() => {
@@ -21,6 +22,8 @@ const App: React.FC = () => {
       document.title = config.html.title;
     }
   }, []);
+
+  const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   return (
     <BrowserRouter>
@@ -30,7 +33,7 @@ const App: React.FC = () => {
         <AnimatedBackground />
         <About />
         <Experience />
-        <Tech />
+        {isMediumScreen && <Tech />}
         <Works />
         <Feedbacks />
         <div className="relative z-0">
