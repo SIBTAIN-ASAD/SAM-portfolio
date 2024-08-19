@@ -36,51 +36,53 @@ type TConfig = {
     feedbacks: TSection;
     works: Required<TSection>;
   };
+  resume: string;
 };
 
 export const config: TConfig = {
   html: {
-    title: "SAM — Portfolio",
-    fullName: "Muhammad Sibtain Asad",
-    email: "sibtainasad50@gmail.com",
+    title: 'SAM — Portfolio',
+    fullName: 'Muhammad Sibtain Asad',
+    email: 'sibtainasad50@gmail.com',
   },
   hero: {
-    name: "Sibtain Malik",
-    p: ["Crafting innovative solutions with React, Django, and AI expertise."],
+    name: 'Sibtain Malik',
+    p: ['Crafting innovative solutions with React, Django, and AI expertise.'],
   },
   contact: {
-    p: "Get in touch",
-    h2: "Contact.",
+    p: 'Get in touch',
+    h2: 'Contact.',
     form: {
       name: {
-        span: "Your Name",
+        span: 'Your Name',
         placeholder: "What's your name?",
       },
-      email: { span: "Your Email", placeholder: "What's your email?" },
+      email: { span: 'Your Email', placeholder: "What's your email?" },
       message: {
-        span: "Your Message",
-        placeholder: "What do you want to say?",
+        span: 'Your Message',
+        placeholder: 'What do you want to say?',
       },
     },
   },
   sections: {
     about: {
-      p: "Introduction",
-      h2: "Overview.",
+      p: 'Introduction',
+      h2: 'Overview.',
       content: `I'm a skilled software developer with experience in TypeScript and JavaScript, specializing in React, Django, and REST. I excel in coding, problem-solving, and software design. Additionally, I have proficiency in AI, particularly reinforcement learning using TensorFlow and PyTorch, and experience with OpenAI Gym environments for experimentation. With a background in AWS, Azure, and Google Cloud Platform, I can architect scalable AI solutions in the cloud.`,
     },
     experience: {
-      p: "Accomplishments to Date",
-      h2: "Professional Experience.",
+      p: 'Accomplishments to Date',
+      h2: 'Professional Experience.',
     },
     feedbacks: {
-      p: "Feedback from Others",
-      h2: "Testimonials.",
+      p: 'Feedback from Others',
+      h2: 'Testimonials.',
     },
     works: {
-      p: "Professional Background",
-      h2: "Projects.",
+      p: 'Professional Background',
+      h2: 'Projects.',
       content: `I have worked on a variety of projects, including a full-stack e-commerce platform, a Django REST API, and a React-based web application. I have also developed a reinforcement learning model for an AI game player and deployed it on AWS. My work has been recognized by clients and colleagues alike for its quality and innovation.`,
     },
   },
+  resume: 'https://drive.google.com/file/d/1wN_Ut2gG9e0WkV553pXmuIrCu-NxVxWt/view?usp=drive_link',
 };

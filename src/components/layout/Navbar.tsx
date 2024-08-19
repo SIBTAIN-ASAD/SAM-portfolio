@@ -81,6 +81,16 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          {/* Download Resume Button */}
+          <li>
+            <a
+              href={config.resume}
+              download
+              className="rounded-md border border-secondary px-2 py-1.5  text-[18px] font-medium text-secondary hover:bg-secondary hover:text-primary transition"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         <div className="flex flex-1 items-center justify-end sm:hidden">
@@ -110,6 +120,16 @@ const Navbar = () => {
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>
               ))}
+              {/* Mobile View Download Resume Button */}
+              <li>
+                <a
+                  href={config.resume}
+                  download
+                  className="mt-4 w-full rounded-md border border-secondary px-2 py-1.5 text-center text-[16px] font-medium text-secondary hover:bg-secondary hover:text-primary transition"
+                >
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
         </div>

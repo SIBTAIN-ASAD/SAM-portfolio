@@ -96,7 +96,7 @@ const Contact = () => {
           })}
           <button
             type="submit"
-            className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none hover:shadow-lg hover:bg-opacity-80"
+            className=" border-2 border-secondary bg-black px-4 opacity-50 text-white font-medium py-4 rounded-lg hover:bg-secondary hover:text-black transition-all duration-300 ease-in-out"
           >
             {loading ? "Sending..." : "Send"}
           </button>
