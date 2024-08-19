@@ -6,7 +6,6 @@ import { SectionWrapper } from '../../hoc';
 import { config } from '../../constants/config';
 import { projects } from '../../constants';
 import { fadeIn } from '../../utils/motion';
-import { useMediaQuery } from 'react-responsive';
 
 const ProjectCard: React.FC<{
   index: number;
@@ -16,8 +15,6 @@ const ProjectCard: React.FC<{
   current: string;
   githubLink?: string;
 }> = ({ index, name, description, tags, current, githubLink }) => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-
   return (
     <motion.div
       variants={fadeIn('up', 'tween', index * 0.3, 0.5)}
@@ -27,35 +24,29 @@ const ProjectCard: React.FC<{
         <img
           src={current}
           alt={name}
-          className={`h-full w-full object-cover ${
-            isMobile
-              ? ''
-              : 'transition-transform duration-300 ease-in-out transform hover:scale-105'
-          } filter brightness-75`}
+          className="h-full w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105 filter brightness-75"
         />
-        {!isMobile && (
-          <div className="absolute p-2 inset-0 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
-            <div className="text-center p-2 h-full border rounded-md text-white">
-              <a
-                href={githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center text-sm text-white"
-              >
-                <img src={github} className="h-10 w-10 my-6 hover:scale-110" alt="" />
-              </a>
+        <div className="absolute p-2 inset-0 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
+          <div className="text-center p-2 h-full border rounded-md text-white">
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm text-white"
+            >
+              <img src={github} className="h-10 w-10 my-6 hover:scale-110" alt="" />
+            </a>
 
-              <p className="mb-4 text-sm text-left">{description}</p>
-              <div className="mt-4 flex flex-wrap gap-2 ">
-                {tags.map(tag => (
-                  <p key={tag.name} className={`text-[14px] ${tag.color}`}>
-                    #{tag.name}
-                  </p>
-                ))}
-              </div>
+            <p className="mb-4 text-sm text-left">{description}</p>
+            <div className="mt-4 flex flex-wrap gap-2 ">
+              {tags.map(tag => (
+                <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+                  #{tag.name}
+                </p>
+              ))}
             </div>
           </div>
-        )}
+        </div>
       </div>
       <div className="p-2 flex flex-wrap gap-2">
         <p className="text-lg text-[#535C91] font-bold">{name}</p>
@@ -65,11 +56,9 @@ const ProjectCard: React.FC<{
 };
 
 const Works = () => {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-
   return (
     <>
-      <Header useMotion={!isMobile} {...config.sections.works} />
+      <Header useMotion={true} {...config.sections.works} />
 
       <div className="flex w-full">
         <motion.p
