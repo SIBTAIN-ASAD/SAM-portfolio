@@ -6,6 +6,7 @@ import { SectionWrapper } from '../../hoc';
 import { config } from '../../constants/config';
 import { projects } from '../../constants';
 import { fadeIn } from '../../utils/motion';
+import { useMediaQuery } from 'react-responsive';
 
 const ProjectCard: React.FC<{
   index: number;
@@ -15,11 +16,10 @@ const ProjectCard: React.FC<{
   current: string;
   githubLink?: string;
 }> = ({ index, name, description, tags, current, githubLink }) => {
-  return (
-    <motion.div
-      variants={fadeIn('up', 'tween', index * 0.3, 0.5)}
-      className="relative w-full sm:w-[360px] rounded-lg shadow-lg border border-[#33488d] overflow-hidden bg-[#070b18]"
-    >
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
+  const CardContent = (
+    <div className="relative w-full sm:w-[360px] rounded-lg shadow-lg border border-[#33488d] overflow-hidden bg-[#070b18]">
       <div className="relative h-[250px] w-full rounded-lg bg-tertiary">
         <img
           src={current}
@@ -38,7 +38,7 @@ const ProjectCard: React.FC<{
             </a>
 
             <p className="mb-4 text-sm text-left">{description}</p>
-            <div className="mt-4 flex flex-wrap gap-2 ">
+            <div className="mt-4 flex flex-wrap gap-2">
               {tags.map(tag => (
                 <p key={tag.name} className={`text-[14px] ${tag.color}`}>
                   #{tag.name}
@@ -51,22 +51,32 @@ const ProjectCard: React.FC<{
       <div className="p-2 flex flex-wrap gap-2">
         <p className="text-lg text-[#535C91] font-bold">{name}</p>
       </div>
+    </div>
+  );
+
+  return !isMobile ? (
+    <motion.div
+      variants={fadeIn('up', 'spring', index * 0.1, 0.5)}
+      className="relative"
+    >
+      {CardContent}
     </motion.div>
+  ) : (
+    CardContent
   );
 };
 
 const Works = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
   return (
     <>
-      <Header useMotion={true} {...config.sections.works} />
+      <Header useMotion={!isMobile} {...config.sections.works} />
 
       <div className="flex w-full">
-        <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]"
-        >
+        <p className="text-secondary mt-3 max-w-3xl text-[17px] leading-[30px]">
           {config.sections.works.content}
-        </motion.p>
+        </p>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
