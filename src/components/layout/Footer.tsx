@@ -19,7 +19,7 @@ const Footer = () => {
         {/* Work & Services Links */}
         <div className="flex justify-center gap-8 mb-8 border-b border-gray-600 pb-4">
           <a href="#about" className="text-md font-medium hover:text-gray-400 transition-colors">
-            About Me
+            About
           </a>
           <a href="#work" className="text-md font-medium hover:text-gray-400 transition-colors">
             Work

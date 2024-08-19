@@ -19,9 +19,7 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
       <p className="text-[24px] font-black text-white">"</p>
 
       <div className="mt-1">
-        <p className="text-[14px] tracking-wider text-white overflow-auto h-28">
-          {testimonial}
-        </p>
+        <p className="text-[14px] tracking-wider text-white overflow-auto h-28">{testimonial}</p>
 
         <div className="mt-7 flex items-center justify-between gap-1">
           <div className="flex flex-1 flex-col">
@@ -52,26 +50,26 @@ const Feedbacks = () => {
     const container = containerRef.current;
     if (container) {
       if (isHovering) {
-        container.style.animationPlayState = 'paused'; // Pause the animation on hover
+        container.style.animationPlayState = 'paused';
       } else {
-        container.style.animationPlayState = 'running'; // Resume the animation immediately
+        container.style.animationPlayState = 'running';
       }
     }
   }, [isHovering]);
 
   return (
     <div className="relative bg-black-100 w-full overflow-hidden rounded-[20px]">
-      <div className="absolute top-0 left-0 w-1/4 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
-      <div className="absolute top-0 right-0 w-1/4 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
-      <div className={`${styles.paddingX} py-2 ml-52`}>
+      <div className="absolute top-0 left-0 w-1/5 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
+      <div className="absolute top-0 right-0 w-1/5 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
+      <div className={`${styles.paddingX} py-2 lg:ml-52 md:ml-32 sm:ml-10 ml-10`}>
         <Header useMotion={true} {...config.sections.feedbacks} />
       </div>
       <div className="relative border-t-4 w-full border-gray-700">
         <div
           ref={containerRef}
           className={cn(
-            "flex gap-7 py-4 w-max overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
-            "animate-scroll"
+            'flex gap-7 py-4 w-max overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+            'animate-scroll'
           )}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
