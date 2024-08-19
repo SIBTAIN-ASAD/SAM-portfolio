@@ -58,9 +58,8 @@ const Hero = () => {
         <Avatar />
       </div>
 
-      {/* <ComputersCanvas /> */}
 
-      <div className="bottom-10 absolute flex w-full items-center justify-center">
+      <div className="absolute bottom-20 flex w-full items-center justify-center">
         <a href="#about">
           <div className="opacity-50">
             <motion.div
