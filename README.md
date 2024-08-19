@@ -12,9 +12,6 @@
 
 [![Sibtain Malik](https://custom-icon-badges.demolab.com/badge/made%20by%20-Sibtain%20Malik-556bf2?logo=github&logoColor=white&labelColor=101827)](https://github.com/luadnjexa)
 [![Top Language](https://img.shields.io/github/languages/top/ladunjexa/reactjs18-3d-portfolio?logo=github&logoColor=%23007ACC&label=TypeScript)](https://www.typescriptlang.org/)
-![Release](https://img.shields.io/github/release/ladunjexa/reactjs18-3d-portfolio.svg)
-![PRs](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=shields)
-![deployment](https://img.shields.io/github/deployments/ladunjexa/reactjs18-3d-portfolio/Production?logo=vercel&label=Website)
 
 ## 🌐 Live Demo
 
@@ -31,79 +28,150 @@ crafting innovative solutions with React, Django, and AI.
 
 ```bash
 sam-portfolio/
-├── src/
-├   ├── App.tsx
-├   ├── globals.css
-├   ├── main.tsx
-├   ├── vite.env.d.ts
-├   ├── components/
-├   ├   ├── atoms/
-├   ├   ├   └── Header.tsx
-├   ├   ├── canvas/
-├   ├   ├   ├── Ball.tsx
-├   ├   ├   ├── Computers.tsx
-├   ├   ├   ├── Earth.tsx
-├   ├   ├   ├── Stars.tsx
-├   ├   ├   └── index.ts
-├   ├   ├── layout/
-├   ├   ├   ├── Loader.tsx
-├   ├   ├   └── Navbar.tsx
-├   ├   ├── sections/
-├   ├   ├   ├── About.tsx
-├   ├   ├   ├── Contact.tsx
-├   ├   ├   ├── Experience.tsx
-├   ├   ├   ├── Feedbacks.tsx
-├   ├   ├   ├── Hero.tsx
-├   ├   ├   ├── Tech.tsx
-├   ├   ├   ├── Works.tsx
-├   ├   └── page.tsx
-├   └── index.ts
-├   ├── constants/
-├   ├   ├── config.ts
-├   ├   ├── styles.ts
-├   ├   └── index.ts
-├   ├── hoc/
-├   ├   ├── SectionWrapper.tsx
-├   ├   └── index.ts
-├   ├── utils/
-├   ├   └── motion.ts
-├   ├── types/
-├   ├   └── index.d.ts
-├   └── assets/
-├       ├── company/
-├       ├   └── [[...]].{svg,png}
-├       ├── tech/
-├       ├   └── [[...]].{svg,png}
-├       ├── [[...]].{svg,png}
-├       └── index.ts
-├── public/
-├   ├── desktop_pc
-├   ├   ├── textures/[[...]].png
-├   ├   ├── license.txt
-├   ├   ├── scene.bin
-├   ├   └── scene.gltf
-├   ├── planet
-├   ├   ├── textures/[[...]].png
-├   ├   ├── license.txt
-├   ├   ├── scene.bin
-├   ├   └── scene.gltf
-├   ├── logo.png
-├   └── logo.svg
-├── .env
-├── .eslintignore
-├── .eslintrc.cjs
-├── .gitignore
-├── .prettierignore
-├── .prettierrc.cjs
-├── index.html
-├── LICENSE
 ├── README.md
+├── dist
+│   ├── assets
+│   │   ├── Globe-G2z_qbzB.js
+│   │   ├── ai-A26rBEwI.svg
+│   │   ├── avatarSE-X_--iij_.svg
+│   │   ├── burger-6erT_Mzq.png
+│   │   ├── css-gLKK_hwV.png
+│   │   ├── docker-60Ckme38.png
+│   │   ├── figma-3Xqs7UmR.png
+│   │   ├── figmaland-3MKnSl4f.png
+│   │   ├── hams-orKSAp4D.png
+│   │   ├── healthcare-kR8YXouF.png
+│   │   ├── html-P_XORoKv.png
+│   │   ├── i2c-c70VMqqz.png
+│   │   ├── index-qi3L0MIj.js
+│   │   ├── index-zswkPJpZ.css
+│   │   ├── logo-bbprSRRX.png
+│   │   ├── mongodb-51PRC_bF.png
+│   │   ├── nexusin-2a7ZEnpo.jpeg
+│   │   ├── nodejs-cOREf0jI.png
+│   │   ├── python-cLej4AAy.png
+│   │   ├── quora-ajjLXlmt.png
+│   │   ├── redux-mW_zk5hm.png
+│   │   ├── splitwise-v-ZcAvaZ.png
+│   │   ├── tailwind-i0ent8iN.png
+│   │   └── tradingtracker-KNRx6N6D.png
+│   ├── index.html
+│   ├── logo.png
+│   ├── logo.svg
+│   └── planet
+│       ├── scene.bin
+│       ├── scene.gltf
+│       └── textures
+│           ├── Clouds_baseColor.png
+│           └── Planet_baseColor.png
+├── index.html
+├── package-lock.json
 ├── package.json
 ├── postcss.config.cjs
+├── public
+│   ├── logo.png
+│   ├── logo.svg
+│   └── planet
+│       ├── scene.bin
+│       ├── scene.gltf
+│       └── textures
+│           ├── Clouds_baseColor.png
+│           └── Planet_baseColor.png
+├── src
+│   ├── App.tsx
+│   ├── assets
+│   │   ├── ai.svg
+│   │   ├── avatarSE.svg
+│   │   ├── burger.png
+│   │   ├── carrent.png
+│   │   ├── close.svg
+│   │   ├── company
+│   │   │   ├── Fiverr.png
+│   │   │   ├── devsinc.jpeg
+│   │   │   └── i2c.png
+│   │   ├── devops.svg
+│   │   ├── figmaland.png
+│   │   ├── github.svg
+│   │   ├── hams.png
+│   │   ├── healthcare.png
+│   │   ├── heroAvatar.png
+│   │   ├── herobg.png
+│   │   ├── index.ts
+│   │   ├── jobit.png
+│   │   ├── logo.png
+│   │   ├── menu.svg
+│   │   ├── mobile.png
+│   │   ├── nexusin.jpeg
+│   │   ├── python.png
+│   │   ├── quora.png
+│   │   ├── sa.svg
+│   │   ├── splitwise.png
+│   │   ├── tech
+│   │   │   ├── css.png
+│   │   │   ├── django.png
+│   │   │   ├── docker.png
+│   │   │   ├── figma.png
+│   │   │   ├── git.png
+│   │   │   ├── html.png
+│   │   │   ├── javascript.png
+│   │   │   ├── mongodb.png
+│   │   │   ├── nodejs.png
+│   │   │   ├── reactjs.png
+│   │   │   ├── redux.png
+│   │   │   ├── tailwind.png
+│   │   │   ├── threejs.svg
+│   │   │   └── typescript.png
+│   │   ├── tradingtracker.png
+│   │   ├── tripguide.png
+│   │   └── web.svg
+│   ├── components
+│   │   ├── atoms
+│   │   │   └── Header.tsx
+│   │   ├── canvas
+│   │   │   ├── Ball.tsx
+│   │   │   ├── Computers.tsx
+│   │   │   ├── Earth.tsx
+│   │   │   ├── Globe.tsx
+│   │   │   ├── Stars.tsx
+│   │   │   ├── World.tsx
+│   │   │   └── index.ts
+│   │   ├── index.ts
+│   │   ├── layout
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Loader.tsx
+│   │   │   └── Navbar.tsx
+│   │   └── sections
+│   │       ├── About.tsx
+│   │       ├── AnimatedBackground.tsx
+│   │       ├── Avatar.tsx
+│   │       ├── Contact.tsx
+│   │       ├── Experience.tsx
+│   │       ├── Feedbacks.tsx
+│   │       ├── Hero.tsx
+│   │       ├── Tech.tsx
+│   │       └── Works.tsx
+│   ├── constants
+│   │   ├── config.ts
+│   │   ├── index.ts
+│   │   └── styles.ts
+│   ├── globals.css
+│   ├── hoc
+│   │   ├── SectionWrapper.tsx
+│   │   └── index.ts
+│   ├── main.tsx
+│   ├── types
+│   │   └── index.d.ts
+│   ├── utils
+│   │   ├── data
+│   │   │   └── globe.json
+│   │   └── motion.ts
+│   └── vite-env.d.ts
+├── styles.css
 ├── tailwind.config.cjs
 ├── tsconfig.json
 ├── tsconfig.node.json
-└── vite.config.js
+├── vite.config.js
+└── yarn.lock
 ```
 
 </details>
@@ -115,21 +183,6 @@ sam-portfolio/
 - [Live Demo](#-live-demo)
 - [Description](#-description)
 - [Technologies Used](#-technologies-used)
-- [Get Started](#-get-started)
-  - [Prerequisites](#-prerequisites)
-  - [Installation and Run Locally](#-installation-and-run-locally)
-  - [Scripts](#-scripts)
-- [Environment Variables](#-environment-variables)
-- [Deployment](#-deployment)
-  - [Deploy to production (manual)](#-deploy-to-production-manual)
-  - [Deploy on Vercel (recommended)](#-deploy-on-vercel-recommended)
-  - [Deploy on Netlify](#-deploy-on-netlify)
-- [Contributing](#-contributing)
-  - [Bug / Feature Request](#-bug--feature-request)
-- [Acknowledgements](#-acknowledgements)
-- [References](#-references)
-- [Contact Us](#-contact-us)
-- [License](#-license)
 
 </details>
 
