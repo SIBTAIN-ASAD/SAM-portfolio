@@ -8,7 +8,8 @@
 [![GitHub commits](https://img.shields.io/github/commit-activity/t/ladunjexa/reactjs18-3d-portfolio?style=social&logo=github)](https://github.com/ladunjexa/reactjs18-3d-portfolio/commits)
 [![Pull requests](https://img.shields.io/github/issues-pr/ladunjexa/reactjs18-3d-portfolio?style=social&logo=github)](https://github.com/ladunjexa/reactjs18-3d-portfolio/pulls)
 
-<img width="1679" alt="image" src="https://github.com/user-attachments/assets/4d3a59b5-c426-4c7e-9727-99b0ece33bc5">
+<img width="1680" alt="image" src="https://github.com/user-attachments/assets/96c1ae96-1219-4f4b-b9fa-cddb4a1b275c">
+
 
 [![Sibtain Malik](https://custom-icon-badges.demolab.com/badge/made%20by%20-Sibtain%20Malik-556bf2?logo=github&logoColor=white&labelColor=101827)](https://github.com/luadnjexa)
 [![Top Language](https://img.shields.io/github/languages/top/ladunjexa/reactjs18-3d-portfolio?logo=github&logoColor=%23007ACC&label=TypeScript)](https://www.typescriptlang.org/)
