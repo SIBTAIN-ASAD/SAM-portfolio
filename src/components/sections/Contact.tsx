@@ -5,7 +5,8 @@ import { SectionWrapper } from "../../hoc";
 import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
-import {  GlobeDemo } from "../canvas/World";
+import GlobeDemo from "../canvas/World";
+import { useMediaQuery } from "react-responsive";
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
@@ -21,6 +22,8 @@ const Contact = () => {
   const formRef = useRef(null);
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
+
+  const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
 
   // @ts-ignore
   const handleChange = (e) => {
@@ -50,7 +53,7 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-          setForm(INITIAL_STATE); 
+          setForm(INITIAL_STATE);
         },
         (error) => {
           setLoading(false);
@@ -86,7 +89,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder={placeholder}
                   className="bg-transparent border-2 border-gray-700 placeholder:text-secondary rounded-lg px-6 py-4 font-medium text-white outline-none"
-                  rows={input === "message" ? 7 : undefined} 
+                  rows={input === "message" ? 7 : undefined}
                 />
               </label>
             );
@@ -100,12 +103,14 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
-      >
-       <GlobeDemo />
-      </motion.div>
+      {isMediumScreen && (
+        <motion.div
+          variants={slideIn("right", "tween", 0.2, 1)}
+          className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
+        >
+          <GlobeDemo />
+        </motion.div>
+      )}
     </div>
   );
 };

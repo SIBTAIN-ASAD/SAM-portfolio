@@ -2,12 +2,9 @@ import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { Suspense } from 'react';
 import { Loader } from '@react-three/drei';
+import React from 'react';
 
-const World = dynamic(() => import('./Globe').then(m => m.World), {
-  ssr: false,
-});
-
-export function GlobeDemo() {
+const GlobeDemo = () => {
   const globeConfig = {
     pointSize: 4,
     globeColor: '#062056',
@@ -394,34 +391,40 @@ export function GlobeDemo() {
     },
   ];
 
+  const World = dynamic(() => import('./Globe').then(m => m.World), {
+    ssr: true,
+  });
+
   return (
-    <Suspense fallback={<Loader/>}>
-    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto relative w-full">
-      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
-          className="div"
-        >
-          <h2 className="text-center text-2xl sm:text-4xl font-bold">
-            Full Stack Engineer Specializing in Scalable Solutions
-          </h2>
-        </motion.div>
-        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+    <Suspense fallback={<Loader />}>
+      <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto relative w-full">
+        <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            className="div"
+          >
+            <h2 className="text-center text-2xl sm:text-4xl font-bold">
+              Full Stack Engineer Specializing in Scalable Solutions
+            </h2>
+          </motion.div>
+          <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40 rounded-md" />
+          <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+            <World data={sampleArcs} globeConfig={globeConfig} />
+          </div>
         </div>
       </div>
-    </div>
     </Suspense>
   );
-}
+};
+
+export default React.memo(GlobeDemo);
