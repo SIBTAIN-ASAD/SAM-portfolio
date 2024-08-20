@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import { styles } from '../../constants/styles';
 import { navLinks } from '../../constants';
 import { logo, menu, close } from '../../assets';
 import { config } from '../../constants/config';
@@ -49,11 +47,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} fixed top-0 z-20 flex w-full items-center py-5 ${
+      className={`fixed top-0 z-20 flex w-full items-center py-5 ${
         scrolled ? 'bg-primary' : 'bg-transparent'
       }`}
     >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+      <div className="mx-auto flex w-full items-center px-8 md:px-20 justify-between">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -61,8 +59,8 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="h-9 w-9 object-contain" />
-          <p className="flex cursor-pointer text-[18px] font-bold text-white ">
+          <img src={logo} alt="logo" className="h-5 w-5" />
+          <p className="flex cursor-pointer text-[20px] font-extrabold text-[#acb8f7]">
             {config.html.title}
           </p>
         </Link>

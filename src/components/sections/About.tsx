@@ -21,7 +21,7 @@ const ServiceCard: React.FC<IServiceCard> = ({ index, title, icon, description }
     tiltMaxAngleY={0}
     glareColor="#000000"
   >
-    <div className="xs:w-[250px] w-full min-w-[280px]">
+    <div className="w-full min-w-[280px]">
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
         className="shadow-card w-full rounded-[20px] p-[1px] border border-[#131b37] relative"
@@ -58,7 +58,7 @@ const About = () => {
         {config.sections.about.content}
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-7 max-sm:justify-center">
+      <div className="mt-20 flex flex-wrap justify-between gap-6">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

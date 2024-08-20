@@ -69,7 +69,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <>
+    <div className=''>
       <Header useMotion={true} {...config.sections.experience} />
 
       <div
@@ -82,7 +82,7 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-    </>
+    </div>
   );
 };
 

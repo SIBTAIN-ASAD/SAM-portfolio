@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="h-screen w-full absolute z-10">
       <div
-        className={`absolute mt-40 inset-0 top-[120px] mx-auto max-w-7xl  flex flex-row items-start gap-5`}
+        className={`absolute inset-0 mx-auto p-8 justify-evenly flex flex-row items-center`}
       >
         <div className="relative p-3 pb-5 pl-1">
           {/* Curtain Animation */}

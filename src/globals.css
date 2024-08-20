@@ -19,7 +19,7 @@
   /* background-image: url("https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg"); */
 
   background: rgb(0,0,30);
-  background: linear-gradient(0deg, rgb(2, 2, 28) 0%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0,0,0,0) 100%);
 }
 .main-title {
   position: absolute;

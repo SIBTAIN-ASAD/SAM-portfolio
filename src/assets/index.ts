@@ -1,4 +1,4 @@
-import logo from './icons/logo.png';
+import logo from './icons/logo.svg';
 import devops from './icons/devops.svg';
 import ai from './icons/ai.svg';
 import sa from './icons/sa.svg';

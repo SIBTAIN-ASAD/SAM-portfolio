@@ -9,7 +9,7 @@ const Avatar = () => {
       transition={{ duration: 0.5, ease: 'easeInOut', delay: 1 }}
       className="relative"
     >
-      <div className="relative bottom-0 hidden md:block left-52">
+      <div className="relative bottom-0 hidden md:block right-10">
         <img
           src={avatar}
           alt="Avatar"
