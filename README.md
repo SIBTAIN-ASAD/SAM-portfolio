@@ -3,7 +3,7 @@
 <!-- GitHub badges -->
 
 
-<img width="1680" alt="image" src="https://github.com/user-attachments/assets/96c1ae96-1219-4f4b-b9fa-cddb4a1b275c">
+<img width="1680" alt="image" src="https://github.com/user-attachments/assets/f6d6b6d9-0879-447f-bb3b-dce75003e554">
 
 
 [![Sibtain Malik](https://custom-icon-badges.demolab.com/badge/made%20by%20-Sibtain%20Malik-556bf2?logo=github&logoColor=white&labelColor=101827)](https://github.com/luadnjexa)
