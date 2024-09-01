@@ -48,7 +48,7 @@ const experiences: TExperience[] = [
     companyName: 'i2c',
     icon: i2c,
     iconBg: '#E6DEDD',
-    date: 'Aug 2022 - Spe 2022',
+    date: 'Jan 2023 - Feb 2023',
     points: [
       'Supported product operations and DevOps functions, contributing to the optimization and management of technical operations.',
       'Assisted in the deployment and monitoring of applications, ensuring system reliability and performance.',
