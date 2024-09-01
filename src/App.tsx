@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { config } from './constants/config';
+import { config } from './constants/curriculumVtae/config';
 import {
   About,
   Contact,

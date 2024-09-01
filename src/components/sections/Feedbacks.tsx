@@ -3,7 +3,7 @@ import { styles } from '../../constants/styles';
 import { testimonials } from '../../constants';
 import { Header } from '../atoms/Header';
 import { TTestimonial } from '../../types';
-import { config } from '../../constants/config';
+import { config } from '../../constants/curriculumVtae/config';
 import { SectionWrapper } from '../../hoc';
 import { cn } from '../../utils/motion';
 
@@ -11,7 +11,7 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
   testimonial,
   name,
   designation,
-  company,
+  from,
   image,
 }) => {
   return (
@@ -27,7 +27,7 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
               <span className="blue-text-gradient">@</span> {name}
             </p>
             <p className="text-secondary mt-1 text-[12px]">
-              {designation} of {company}
+              {designation} of {from}
             </p>
           </div>
 

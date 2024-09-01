@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { navLinks } from '../../constants';
+import { navLinks } from '../../constants/navLinks';
 import { logo, menu, close } from '../../assets';
-import { config } from '../../constants/config';
+import { config } from '../../constants/curriculumVtae/config';
 
 const Navbar = () => {
   const [active, setActive] = useState<string | null>();

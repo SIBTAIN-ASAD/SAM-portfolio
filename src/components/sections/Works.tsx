@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { github } from '../../assets';
 import { Header } from '../atoms/Header';
 import { SectionWrapper } from '../../hoc';
-import { config } from '../../constants/config';
+import { config } from '../../constants/curriculumVtae/config';
 import { projects } from '../../constants';
 import { fadeIn } from '../../utils/motion';
 import { useMediaQuery } from 'react-responsive';
@@ -55,10 +55,7 @@ const ProjectCard: React.FC<{
   );
 
   return !isMobile ? (
-    <motion.div
-      variants={fadeIn('up', 'spring', index * 0.1, 0.5)}
-      className="relative"
-    >
+    <motion.div variants={fadeIn('up', 'spring', index * 0.1, 0.5)} className="relative">
       {CardContent}
     </motion.div>
   ) : (

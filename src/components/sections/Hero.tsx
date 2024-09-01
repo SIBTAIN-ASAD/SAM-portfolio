@@ -1,15 +1,13 @@
 import { motion } from 'framer-motion';
 import { styles } from '../../constants/styles';
-import { config } from '../../constants/config';
+import { config } from '../../constants/curriculumVtae/config';
 import { Typewriter } from 'react-simple-typewriter';
 import Avatar from './Avatar';
 
 const Hero = () => {
   return (
     <section className="h-screen w-full absolute z-10">
-      <div
-        className={`absolute inset-0 mx-auto p-8 justify-evenly flex flex-row items-center`}
-      >
+      <div className={`absolute inset-0 mx-auto p-8 justify-evenly flex flex-row items-center`}>
         <div className="relative p-3 pb-5 pl-1">
           {/* Curtain Animation */}
           <motion.div
@@ -57,7 +55,6 @@ const Hero = () => {
         </div>
         <Avatar />
       </div>
-
 
       <div className="absolute bottom-20 flex w-full items-center justify-center">
         <a href="#about">

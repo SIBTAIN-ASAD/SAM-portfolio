@@ -5,7 +5,7 @@ import { experiences } from '../../constants';
 import { SectionWrapper } from '../../hoc';
 import { Header } from '../atoms/Header';
 import { TExperience } from '../../types';
-import { config } from '../../constants/config';
+import { config } from '../../constants/curriculumVtae/config';
 
 const ExperienceCard: React.FC<TExperience> = experience => {
   return (
@@ -45,7 +45,6 @@ const ExperienceCard: React.FC<TExperience> = experience => {
   );
 };
 
-
 const Experience = () => {
   const timelineRef = useRef(null);
   const [isInView, setIsInView] = useState(false);
@@ -58,7 +57,7 @@ const Experience = () => {
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
-        } 
+        }
       },
       { threshold: 0.3 }
     );
@@ -69,7 +68,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className=''>
+    <div className="">
       <Header useMotion={true} {...config.sections.experience} />
 
       <div

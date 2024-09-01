@@ -21,6 +21,7 @@ import django from './tech/django.png';
 
 import devsinc from './company/devsinc.jpeg';
 import Fiverr from './company/Fiverr.png';
+import upwork from './company/upwork.png';
 import i2c from './company/i2c.png';
 
 import healthcare from './projects/healthcare.png';
@@ -32,6 +33,8 @@ import burger from './projects/burger.png';
 import pythonMS from './projects/python.png';
 import figmaland from './projects/figmaland.png';
 import tradingtracker from './projects/tradingtracker.png';
+
+import aliDp from './people/Alidp.jpeg';
 
 export {
   logo,
@@ -55,6 +58,7 @@ export {
   devsinc,
   Fiverr,
   i2c,
+  upwork,
   healthcare,
   quora,
   splitwise,
@@ -65,4 +69,5 @@ export {
   pythonMS,
   figmaland,
   tradingtracker,
+  aliDp,
 };

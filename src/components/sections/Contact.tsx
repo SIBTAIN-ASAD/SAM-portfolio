@@ -1,15 +1,15 @@
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import { SectionWrapper } from "../../hoc";
-import { slideIn } from "../../utils/motion";
-import { config } from "../../constants/config";
-import { Header } from "../atoms/Header";
-import GlobeDemo from "../canvas/World";
-import { useMediaQuery } from "react-responsive";
+import { useState, useRef } from 'react';
+import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
+import { SectionWrapper } from '../../hoc';
+import { slideIn } from '../../utils/motion';
+import { config } from '../../constants/curriculumVtae/config';
+import { Header } from '../atoms/Header';
+import GlobeDemo from '../canvas/World';
+import { useMediaQuery } from 'react-responsive';
 
 const INITIAL_STATE = Object.fromEntries(
-  Object.keys(config.contact.form).map((input) => [input, ""])
+  Object.keys(config.contact.form).map(input => [input, ''])
 );
 
 const emailjsConfig = {
@@ -23,16 +23,16 @@ const Contact = () => {
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
 
-  const isMediumScreen = useMediaQuery({ query: "(min-width: 768px)" });
+  const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   // @ts-ignore
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
   // @ts-ignore
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     setLoading(true);
 
@@ -52,44 +52,42 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          alert('Thank you. I will get back to you as soon as possible.');
           setForm(INITIAL_STATE);
         },
-        (error) => {
+        error => {
           setLoading(false);
-          console.error("EmailJS Error:", error);
-          alert("Something went wrong. Please try again.");
+          console.error('EmailJS Error:', error);
+          alert('Something went wrong. Please try again.');
         }
       );
   };
 
   return (
-    <div
-      className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}
-    >
+    <div className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}>
       <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
+        variants={slideIn('left', 'tween', 0.2, 1)}
         className="bg-transparent flex-[0.75] rounded-2xl p-8 pb-4 mb-4 border-2 border-gray-700"
       >
         <Header useMotion={false} {...config.contact} />
 
         <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
-          {Object.keys(config.contact.form).map((input) => {
+          {Object.keys(config.contact.form).map(input => {
             const { span, placeholder } =
               config.contact.form[input as keyof typeof config.contact.form];
-            const Component = input === "message" ? "textarea" : "input";
+            const Component = input === 'message' ? 'textarea' : 'input';
 
             return (
               <label key={input} className="flex flex-col">
                 <span className="mb-4 font-medium text-white">{span}</span>
                 <Component
-                  type={input === "email" ? "email" : "text"}
+                  type={input === 'email' ? 'email' : 'text'}
                   name={input}
                   value={form[input]}
                   onChange={handleChange}
                   placeholder={placeholder}
                   className="bg-transparent border-2 border-gray-700 placeholder:text-secondary rounded-lg px-6 py-4 font-medium text-white outline-none"
-                  rows={input === "message" ? 7 : undefined}
+                  rows={input === 'message' ? 7 : undefined}
                 />
               </label>
             );
@@ -98,14 +96,14 @@ const Contact = () => {
             type="submit"
             className=" border-2 border-secondary bg-black px-4 opacity-50 text-white font-medium py-4 rounded-lg hover:bg-secondary hover:text-black transition-all duration-300 ease-in-out"
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
       </motion.div>
 
       {isMediumScreen && (
         <motion.div
-          variants={slideIn("right", "tween", 0.2, 1)}
+          variants={slideIn('right', 'tween', 0.2, 1)}
           className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
         >
           <GlobeDemo />
@@ -115,4 +113,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, 'contact');
