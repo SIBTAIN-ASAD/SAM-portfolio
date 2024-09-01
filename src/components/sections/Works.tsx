@@ -27,7 +27,14 @@ const ProjectCard: React.FC<{
           className="h-full w-full object-cover transition-transform duration-300 ease-in-out transform hover:scale-105 filter brightness-75"
         />
         <div className="absolute p-2 inset-0 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm opacity-0 transition-opacity duration-300 ease-in-out hover:opacity-100">
-          <div className="text-center p-2 h-full border rounded-md text-white">
+          <div
+            className="text-center p-2 h-full rounded-md text-white"
+            style={{
+              borderWidth: '0.01px',
+              borderColor: 'rgba(255, 255, 255, 0.2)',
+              borderStyle: 'solid',
+            }}
+          >
             <a
               href={githubLink}
               target="_blank"
