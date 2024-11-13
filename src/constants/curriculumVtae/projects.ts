@@ -3,6 +3,7 @@ import type { TProject } from '../../types';
 import {
   healthcare,
   quora,
+  subcold,
   splitwise,
   hams,
   nexus,
@@ -33,6 +34,31 @@ const projects: TProject[] = [
     ],
     image: quora,
     sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/quora/',
+  },
+  {
+    name: 'Subcold Return Project',
+    description:
+      'A web application integrates a Django backend with a React frontend, utilizing Linnworks CRM APIs to display stats for return orders.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'Django',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'PostgreSQL',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'RESTful APIs',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: subcold,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/subcon-return-project',
   },
   {
     name: 'Splitwise',

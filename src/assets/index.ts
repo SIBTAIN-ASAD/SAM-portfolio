@@ -26,6 +26,7 @@ import i2c from './company/i2c.png';
 
 import healthcare from './projects/healthcare.png';
 import quora from './projects/quora.png';
+import subcold from './projects/subcold.png';
 import splitwise from './projects/splitwise.png';
 import hams from './projects/hams.png';
 import nexus from './projects/nexusin.jpeg';
@@ -70,4 +71,5 @@ export {
   figmaland,
   tradingtracker,
   aliDp,
+  subcold,
 };
