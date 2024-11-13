@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaInstagram, FaFacebook, FaDiscord } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const footerVariants = {
@@ -55,6 +55,16 @@ const Footer = () => {
               <a href="https://www.instagram.com/sibtain__malik/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-2xl hover:text-red-400 transition-colors" />
               </a>
+              <a href="https://facebook.com/Sibtainasad14" target="_blank" rel ="noopener noreferrer">
+                <FaFacebook className="text-2xl hover:text-blue-400 transition-colors" />
+              </a>
+              <a href="https://discord.com/users/sibtain__malik" target="_blank" rel="noopener noreferrer">
+                <FaDiscord className="text-2xl hover:text-purple-400 transition-colors" />
+              </a>
+              <a href="mailto:sibtainasad50@gmail.com" target="_blank" rel="noopener noreferrer">
+                <FaEnvelope className="text-2xl hover:text-blue-800 transition-colors" />
+              </a>
+
             </div>
           </div>
 
@@ -62,7 +72,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end pl-6">
             <h2 className="text-xl font-semibold mb-2">Contact Info</h2>
             <p className="text-md mb-1">Lahore, Pakistan</p>
-            <p className="text-md mb-1">Phone: +92 341 6010353</p>
+            <p className="text-md mb-1">Phone: +92 300 7501631</p>
             <p className="text-md">Email: sibtainasad50@gmail.com</p>
           </div>
         </div>

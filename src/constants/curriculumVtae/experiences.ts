@@ -8,11 +8,12 @@ const experiences: TExperience[] = [
     companyName: 'Devsinc',
     icon: devsinc,
     iconBg: '#E6DEDD',
-    date: 'Feb 2023 - Present',
+    date: 'Nov 2023 - Present',
     points: [
       'Led full-stack development projects within the healthcare domain, incorporating a referral system and integrating Adobe APIs.',
       'Utilized Agile methodologies and managed projects through Jira, ensuring timely and efficient delivery.',
       'Focused on front-end development using Material-UI, TypeScript, and React.',
+      'On the backend, I worked with Django, PostgreSQL, AWS Lambda, and Rest Framework to build robust and scalable APIs.',
       'Conducted proof of concepts (POCs) and collaborated with cross-functional teams to deliver high-quality solutions.',
     ],
     description: 'Full Stack Engineer',
@@ -24,7 +25,7 @@ const experiences: TExperience[] = [
     iconBg: '#383E56',
     date: 'Mar 2021 - Present',
     points: [
-      'Specialized in React.js, Django, AWS, and Firebase, delivering custom web solutions to clients globally.',
+      'Specialized in React.js, Django, AWS, and Firebase, delivering custom web solutions to clients globally and also worked on integrating GraphQL and Fast Api to improve the user experience.',
       'Developed and maintained various web applications tailored to client needs, focusing on performance and scalability.',
       'Managed projects from inception to deployment, ensuring high-quality results and client satisfaction.',
     ],
@@ -48,7 +49,7 @@ const experiences: TExperience[] = [
     companyName: 'i2c',
     icon: i2c,
     iconBg: '#E6DEDD',
-    date: 'Jan 2023 - Feb 2023',
+    date: 'Aug 2023 - Oct 2023',
     points: [
       'Supported product operations and DevOps functions, contributing to the optimization and management of technical operations.',
       'Assisted in the deployment and monitoring of applications, ensuring system reliability and performance.',

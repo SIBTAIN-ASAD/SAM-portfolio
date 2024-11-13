@@ -414,8 +414,11 @@ const GlobeDemo = () => {
             className="div"
           >
             <h2 className="text-center text-2xl sm:text-4xl font-bold">
-              Full Stack Engineer Specializing in Scalable Solutions
+              Full Stack Engineer
             </h2>
+            <h3 className="text-center text-xl sm:text-2xl font-bold">
+            <i>Specializing in Scalable Solutions</i>
+            </h3>
           </motion.div>
           <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent to-black z-40 rounded-full" />
           <div className="absolute w-full -bottom-20 h-72 md:h-full z-10 rounded">

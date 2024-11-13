@@ -46,7 +46,7 @@ export const config: TConfig = {
     email: 'sibtainasad50@gmail.com',
   },
   hero: {
-    name: 'Sibtain Malik',
+    name: 'Sibtain Asad',
     p: ['Crafting innovative solutions with React, Django, and AI expertise.'],
   },
   contact: {
@@ -84,5 +84,5 @@ export const config: TConfig = {
       content: `I have worked on a variety of projects, including a full-stack e-commerce platform, a Django REST API, and a React-based web application. I have also developed a reinforcement learning model for an AI game player and deployed it on AWS. My work has been recognized by clients and colleagues alike for its quality and innovation.`,
     },
   },
-  resume: 'https://drive.google.com/file/d/1CCj3iIyluYtGAlmycCMpBuMLy_g9PL5j/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1-Miyoy7Uq3bHVd739JlRAqp4QzAyl-cn/view?usp=sharing',
 };
