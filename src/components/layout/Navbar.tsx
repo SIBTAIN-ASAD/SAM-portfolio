@@ -90,12 +90,16 @@ const Navbar = () => {
         </ul>
 
         <div className="flex flex-1 items-center justify-end sm:hidden">
+        <div className="relative">
           <img
             src={toggle ? close : menu}
             alt="menu"
-            className="h-[28px] w-[28px] object-contain"
+            className={` cursor-pointer transition-transform duration-300 ease-in-out ${
+              toggle ? "h-[20px] w-[20px] rotate-90" : "h-[24px] w-[24px] rotate-0"
+            } hover:scale-110`}
             onClick={() => setToggle(!toggle)}
           />
+        </div>
 
           <div
             className={`${

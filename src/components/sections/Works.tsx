@@ -83,7 +83,7 @@ const Works = () => {
         </p>
       </div>
 
-      <div className="mt-20 flex flex-wrap justify-start gap-6">
+      <div className="mt-20 flex flex-wrap justify-center gap-4">
         {projects.map((project, index) => (
           <ProjectCard
             current={project.image}
