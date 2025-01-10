@@ -1,6 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import {
+  VerticalTimeline as VerticalTimelineComponent,
+  VerticalTimelineElement as VerticalTimelineElementComponent,
+} from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+
+const VerticalTimeline: any = VerticalTimelineComponent;
+const VerticalTimelineElement: any = VerticalTimelineElementComponent;
 import { experiences } from '../../constants';
 import { SectionWrapper } from '../../hoc';
 import { Header } from '../atoms/Header';
