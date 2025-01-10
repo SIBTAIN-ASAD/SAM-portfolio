@@ -11,6 +11,8 @@ import {
   pythonMS,
   figmaland,
   tradingtracker,
+  buybox,
+  forethought,
 } from '../../assets';
 
 const projects: TProject[] = [
@@ -78,6 +80,35 @@ const projects: TProject[] = [
     sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/splitwise/tree/feature/Dashboard/',
   },
   {
+    name: 'Forethought',
+    description:
+      'Designed and implemented an AI-driven workflow optimization solution for customer support processes.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'fastapi',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'mongodb',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'kubernetes',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: forethought,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/',
+  },
+  {
     name: 'Invesment Tracker',
     description:
       'InvestmentTracker is a web application designed to help users manage and track their investments in stocks, ETFs, and cryptocurrencies.',
@@ -101,6 +132,31 @@ const projects: TProject[] = [
     ],
     image: tradingtracker,
     sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/Trading-Tracker',
+  },
+  {
+    name: 'BuyBox',
+    description:
+      'A property rental and buy/sell platform using Django templates, where users can browse available properties, filter by location and price, and manage listings.',
+    tags: [
+      {
+        name: 'django',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'postgres',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'stripe',
+        color: 'pink-text-gradient',
+      },
+      {
+        name: 'sendgrid',
+        color: 'pink-text-gradient',
+      },
+    ],
+    image: buybox,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/offmarket_buybox',
   },
   {
     name: 'HAMS',

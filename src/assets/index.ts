@@ -34,6 +34,8 @@ import burger from './projects/burger.png';
 import pythonMS from './projects/python.png';
 import figmaland from './projects/figmaland.png';
 import tradingtracker from './projects/tradingtracker.png';
+import buybox from './projects/buybox.png';
+import forethought from './projects/forethought.png';
 
 import aliDp from './people/Alidp.jpeg';
 
@@ -72,4 +74,6 @@ export {
   tradingtracker,
   aliDp,
   subcold,
+  buybox,
+  forethought,
 };
