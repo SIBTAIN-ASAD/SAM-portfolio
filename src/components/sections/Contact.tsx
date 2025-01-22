@@ -7,6 +7,8 @@ import { Header } from '../atoms/Header';
 import GlobeDemo from '../canvas/World';
 import { useMediaQuery } from 'react-responsive';
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map(input => [input, ''])
@@ -42,12 +44,16 @@ const Contact = () => {
       )
       .then(
         () => {
-          alert('Thank you. I will get back to you as soon as possible.');
+          toast.success('Thank you. I will get back to you as soon as possible.', {
+            position: 'top-right',
+          });
           setForm(INITIAL_STATE);
         },
         error => {
           console.error('Failed to send email:', error);
-          alert('Something went wrong. Please try again.');
+          toast.error('Something went wrong. Please try again.', {
+            position: 'top-right',
+          });
         }
       )
       .finally(() => setLoading(false));
@@ -99,6 +105,19 @@ const Contact = () => {
           <GlobeDemo />
         </motion.div>
       )}
+      <ToastContainer
+        className="z-50"
+        theme="purple"
+        autoClose={2000}
+        hideProgressBar={true}
+        pauseOnHover={true}
+        position="top-right"
+        style={{
+          marginTop: '60px',
+          right: '10px',
+          zIndex: 1050,
+        }}
+      />
     </div>
   );
 };
