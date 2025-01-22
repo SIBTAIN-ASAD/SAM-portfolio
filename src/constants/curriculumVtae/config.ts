@@ -16,11 +16,11 @@ type TConfig = {
   };
   contact: {
     form: {
-      name: {
+      from_name: {
         span: string;
         placeholder: string;
       };
-      email: {
+      from_email: {
         span: string;
         placeholder: string;
       };
@@ -53,11 +53,11 @@ export const config: TConfig = {
     p: 'Get in touch',
     h2: 'Contact.',
     form: {
-      name: {
+      from_name: {
         span: 'Your Name',
         placeholder: "What's your name?",
       },
-      email: { span: 'Your Email', placeholder: "What's your email?" },
+      from_email: { span: 'Your Email', placeholder: "What's your email?" },
       message: {
         span: 'Your Message',
         placeholder: 'What do you want to say?',

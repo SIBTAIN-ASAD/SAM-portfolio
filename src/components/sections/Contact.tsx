@@ -6,6 +6,7 @@ import { config } from '../../constants/curriculumVtae/config';
 import { Header } from '../atoms/Header';
 import GlobeDemo from '../canvas/World';
 import { useMediaQuery } from 'react-responsive';
+import emailjs from 'emailjs-com';
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map(input => [input, ''])
@@ -18,37 +19,38 @@ const Contact = () => {
 
   const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
-  // @ts-ignore
-  const handleChange = e => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const data = await response.json();
+    const emailData = {
+      ...form,
+      to_email: import.meta.env.VITE_EMAILJS_TO_EMAIL,
+    };
 
-      if (response.ok) {
-        setLoading(false);
-        alert('Thank you. I will get back to you as soon as possible.');
-        setForm(INITIAL_STATE);
-      } else {
-        alert(data.error || 'An error occurred.');
-      }
-    } catch (error) {
-      console.error(error);
-      alert('Something went wrong. Please try again.');
-    } finally {
-      setLoading(false);
-    }
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        emailData,
+        import.meta.env.VITE_EMAILJS_ACCESS_TOKEN
+      )
+      .then(
+        () => {
+          alert('Thank you. I will get back to you as soon as possible.');
+          setForm(INITIAL_STATE);
+        },
+        error => {
+          console.error('Failed to send email:', error);
+          alert('Something went wrong. Please try again.');
+        }
+      )
+      .finally(() => setLoading(false));
   };
 
   return (
