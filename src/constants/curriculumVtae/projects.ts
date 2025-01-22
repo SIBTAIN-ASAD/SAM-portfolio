@@ -263,8 +263,7 @@ const projects: TProject[] = [
   },
   {
     name: 'kubernetes',
-    description:
-      'A Django app for demonstrating a Shop setup using Kubernetes and Docker Compose.',
+    description: 'A Django app for demonstrating a Shop setup using Kubernetes and Docker Compose.',
     tags: [
       {
         name: 'python',
@@ -278,9 +277,9 @@ const projects: TProject[] = [
         name: 'docker',
         color: 'blue-text-gradient',
       },
-  ],
-  image: kubernetes,
-  sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/kubernetes',
+    ],
+    image: kubernetes,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/kubernetes',
   },
 ];
 
