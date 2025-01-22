@@ -160,6 +160,26 @@ const projects: TProject[] = [
     sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/offmarket_buybox',
   },
   {
+    name: 'kubernetes',
+    description: 'A Django app for demonstrating a Shop setup using Kubernetes and Docker Compose.',
+    tags: [
+      {
+        name: 'python',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'kubernetes',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'docker',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: kubernetes,
+    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/kubernetes',
+  },
+  {
     name: 'HAMS',
     description:
       'A hospital appointment management system designed to streamline the appointment booking process and enhance patient experience.',
@@ -260,26 +280,6 @@ const projects: TProject[] = [
     ],
     image: pythonMS,
     sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/Flight-MS-Python',
-  },
-  {
-    name: 'kubernetes',
-    description: 'A Django app for demonstrating a Shop setup using Kubernetes and Docker Compose.',
-    tags: [
-      {
-        name: 'python',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'kubernetes',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'docker',
-        color: 'blue-text-gradient',
-      },
-    ],
-    image: kubernetes,
-    sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/kubernetes',
   },
 ];
 
