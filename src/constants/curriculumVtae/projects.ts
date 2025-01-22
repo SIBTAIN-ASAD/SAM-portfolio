@@ -13,6 +13,7 @@ import {
   tradingtracker,
   buybox,
   forethought,
+  kubernetes,
 } from '../../assets';
 
 const projects: TProject[] = [
@@ -259,6 +260,27 @@ const projects: TProject[] = [
     ],
     image: pythonMS,
     sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/Flight-MS-Python',
+  },
+  {
+    name: 'kubernetes',
+    description:
+      'A Django app for demonstrating a Shop setup using Kubernetes and Docker Compose.',
+    tags: [
+      {
+        name: 'python',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'kubernetes',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'docker',
+        color: 'blue-text-gradient',
+      },
+  ],
+  image: kubernetes,
+  sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/kubernetes',
   },
 ];
 
