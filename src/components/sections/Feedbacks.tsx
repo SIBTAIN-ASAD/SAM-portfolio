@@ -6,6 +6,7 @@ import { TTestimonial } from '../../types';
 import { config } from '../../constants/curriculumVtae/config';
 import { SectionWrapper } from '../../hoc';
 import { cn } from '../../utils/motion';
+import { verified_icon } from '../../assets';
 
 const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
   testimonial,
@@ -13,9 +14,16 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
   designation,
   from,
   image,
+  verified = false,
 }) => {
   return (
-    <div className="w-[350px] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-700 bg-black px-8 py-6">
+    <div className="w-[350px] max-w-full flex-shrink-0 rounded-2xl border border-b-0 border-slate-700 bg-black px-8 py-6 relative">
+      {verified && (
+        <div className="absolute top-3 right-3">
+          <img src={verified_icon} alt="verified" className="w-5 h-5" />
+        </div>
+      )}
+      
       <p className="text-[24px] font-black text-white">"</p>
 
       <div className="mt-1">

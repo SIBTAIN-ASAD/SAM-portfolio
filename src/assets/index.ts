@@ -7,6 +7,7 @@ import github from './icons/github.svg';
 import menu from './icons/menu.svg';
 import close from './icons/close.svg';
 import avatar from './icons/avatarSE.svg';
+import verified_icon from './icons/verified.svg';
 
 import docker from './tech/docker.png';
 import git from './tech/git.png';
@@ -78,4 +79,5 @@ export {
   buybox,
   forethought,
   kubernetes,
+  verified_icon,
 };

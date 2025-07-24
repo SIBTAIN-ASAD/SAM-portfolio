@@ -9,6 +9,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'Israel',
     image: 'https://randomuser.me/api/portraits/men/1.jpg',
+    verified: true,
   },
   {
     testimonial:
@@ -17,14 +18,16 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'United States',
     image: 'https://randomuser.me/api/portraits/women/2.jpg',
+    verified: true,
   },
   {
     testimonial:
-      'Working with Sibtain was a truly rewarding experience. As a Software Engineer on my team, he brought the perfect blend of dedication, skill, and initiative. Sibtain didn’t just complete tasks—he took full ownership of his work, consistently delivering top-notch results in both front-end and back-end development. His ability to quickly grasp complex requirements and deliver ahead of deadlines was impressive. Beyond his technical skills, Sibtain was a team player who made collaboration easy and enjoyable. If you’re looking for a proactive, reliable, and talented developer on Upwork, I highly recommend Sibtain.',
+      'Working with Sibtain was a truly rewarding experience. As a Software Engineer on my team, he brought the perfect blend of dedication, skill, and initiative. Sibtain didn\'t just complete tasks—he took full ownership of his work, consistently delivering top-notch results in both front-end and back-end development. His ability to quickly grasp complex requirements and deliver ahead of deadlines was impressive. Beyond his technical skills, Sibtain was a team player who made collaboration easy and enjoyable. If you\'re looking for a proactive, reliable, and talented developer on Upwork, I highly recommend Sibtain.',
     name: 'Ali Jawad',
     designation: 'Senior Software Engineer',
     from: 'Devsinc',
     image: aliDp,
+    verified: true,
   },
   {
     testimonial:
@@ -33,6 +36,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'United States',
     image: 'https://randomuser.me/api/portraits/men/3.jpg',
+    verified: true,
   },
   {
     testimonial:
@@ -41,6 +45,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'Germany',
     image: 'https://randomuser.me/api/portraits/men/4.jpg',
+    verified: true,
   },
   {
     testimonial:
@@ -49,6 +54,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'Pakistan',
     image: 'https://randomuser.me/api/portraits/men/5.jpg',
+    verified: true,
   },
   {
     testimonial:
@@ -57,6 +63,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'Malaysia',
     image: 'https://randomuser.me/api/portraits/women/6.jpg',
+    verified: true,
   },
   {
     testimonial:
@@ -65,6 +72,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'United Kingdom',
     image: 'https://randomuser.me/api/portraits/men/7.jpg',
+    verified: true,
   },
   {
     testimonial:
@@ -73,6 +81,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'Estonia',
     image: 'https://randomuser.me/api/portraits/men/8.jpg',
+    verified: true,
   },
   {
     testimonial:
@@ -81,6 +90,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'United States',
     image: 'https://randomuser.me/api/portraits/men/9.jpg',
+    verified: true,
   },
   {
     testimonial:
@@ -89,6 +99,7 @@ const testimonials: TTestimonial[] = [
     designation: 'Client',
     from: 'United Kingdom',
     image: 'https://randomuser.me/api/portraits/men/10.jpg',
+    verified: true,
   },
 ];
 

@@ -17,6 +17,7 @@ export type TTestimonial = {
   designation: string;
   from: string;
   image: string;
+  verified?: boolean;
 } & Required<Pick<TCommonProps, 'name'>>;
 
 export type TProject = {
