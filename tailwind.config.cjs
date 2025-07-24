@@ -23,12 +23,12 @@ module.exports = {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
       animation: {
-        scroll: "scroll 30s linear infinite", // Add scroll animation
+        scroll: "scroll 60s linear infinite",
       },
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" }, // Moves the content from right to left
+          "100%": { transform: "translateX(-100%)" },
         },
       },
     },

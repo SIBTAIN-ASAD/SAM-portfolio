@@ -35,7 +35,7 @@ const FeedbackCard: React.FC<{ index: number } & TTestimonial> = ({
               <span className="blue-text-gradient">@</span> {name}
             </p>
             <p className="text-secondary mt-1 text-[12px]">
-              {designation} of {from}
+              {designation} from {from}
             </p>
           </div>
 
@@ -76,14 +76,19 @@ const Feedbacks = () => {
         <div
           ref={containerRef}
           className={cn(
-            'flex gap-7 py-4 w-max overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]',
+            'flex gap-7 py-4 w-max overflow-hidden',
             'animate-scroll'
           )}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          {testimonials.map((testimonial, index) => (
-            <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+          {/* Duplicate testimonials to create seamless loop */}
+          {[...testimonials, ...testimonials].map((testimonial, index) => (
+            <FeedbackCard 
+              key={`${testimonial.name}-${index}`} 
+              index={index} 
+              {...testimonial} 
+            />
           ))}
         </div>
       </div>
