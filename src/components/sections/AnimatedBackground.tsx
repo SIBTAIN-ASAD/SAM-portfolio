@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
+interface AnimatedBackgroundProps {
+  onReady?: () => void;
+}
+
 class Point {
   x: number;
   y: number;
@@ -51,13 +55,14 @@ class Circle {
   }
 }
 
-const AnimatedBackground: React.FC = () => {
+const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({ onReady }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const largeHeaderRef = useRef<HTMLDivElement>(null);
   const points = useRef<Point[]>([]);
   const target = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const animateHeader = useRef(true);
   const animationEnabled = useRef(true);
+  const isInitialized = useRef(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
@@ -188,6 +193,17 @@ const AnimatedBackground: React.FC = () => {
       for (let i = 0; i < points.current.length; i++) {
         shiftPoint(points.current[i]);
       }
+      
+      // Signal that background is ready after the first animation frame
+      if (!isInitialized.current) {
+        isInitialized.current = true;
+        // Use requestAnimationFrame to ensure the first frame has rendered
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            onReady?.();
+          }, 50);
+        });
+      }
     };
 
     const addListeners = () => {
@@ -202,6 +218,13 @@ const AnimatedBackground: React.FC = () => {
     initHeader();
     if (animationEnabled.current) {
       initAnimation();
+    } else {
+      // If animation is disabled, still signal ready
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          onReady?.();
+        }, 50);
+      });
     }
     addListeners();
 
@@ -210,7 +233,7 @@ const AnimatedBackground: React.FC = () => {
       window.removeEventListener('scroll', scrollCheck);
       window.removeEventListener('resize', resize);
     };
-  }, []); // Only run once on mount
+  }, [onReady]); // Add onReady to dependencies
 
   return (
     <div

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { config } from './constants/curriculumVtae/config';
 import {
@@ -17,6 +17,8 @@ import Footer from './components/layout/Footer';
 import { useMediaQuery } from 'react-responsive';
 
 const App: React.FC = () => {
+  const [isBackgroundReady, setIsBackgroundReady] = useState(false);
+
   useEffect(() => {
     if (document.title !== config.html.title) {
       document.title = config.html.title;
@@ -25,12 +27,16 @@ const App: React.FC = () => {
 
   const isMediumScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
+  const handleBackgroundReady = () => {
+    setIsBackgroundReady(true);
+  };
+
   return (
     <BrowserRouter>
       <div className="bg-primary relative z-1">
         <Navbar />
-        <Hero />
-        <AnimatedBackground />
+        <Hero isBackgroundReady={isBackgroundReady} />
+        <AnimatedBackground onReady={handleBackgroundReady} />
         <About />
         <Experience />
         {isMediumScreen && <Tech />}

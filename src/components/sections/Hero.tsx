@@ -4,16 +4,30 @@ import { config } from '../../constants/curriculumVtae/config';
 import { Typewriter } from 'react-simple-typewriter';
 import Avatar from './Avatar';
 
-const Hero = () => {
+interface HeroProps {
+  isBackgroundReady?: boolean;
+}
+
+const Hero: React.FC<HeroProps> = ({ isBackgroundReady = true }) => {
   return (
     <section className="h-screen w-full absolute z-10">
+      {/* Loading overlay to prevent flicker */}
+      {!isBackgroundReady && (
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="absolute inset-0 bg-primary z-20"
+        />
+      )}
+      
       <div className={`absolute inset-0 mx-auto p-8 justify-evenly flex flex-row items-center`}>
         <div className="relative p-3 pb-5 pl-1">
           {/* Curtain Animation */}
           <motion.div
             initial={{ width: '100%', left: '0%' }}
             animate={{ width: '0%', left: '100%' }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
+            transition={{ duration: 1, ease: 'easeInOut', delay: isBackgroundReady ? 0 : 0.5 }}
             className="absolute inset-0 bg-[#acb8f7] opacity-25"
             style={{ zIndex: 10 }}
           />
@@ -25,6 +39,7 @@ const Hero = () => {
             transition={{
               duration: 0.75,
               ease: 'easeInOut',
+              delay: isBackgroundReady ? 0 : 0.5,
             }}
             className="absolute bottom-0 left-0 h-1 border-b-2 border-gray-700"
             style={{ borderBottom: '8px solid #acb8f7', borderRadius: '20%' }}
@@ -34,7 +49,11 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: 'easeInOut', delay: 1 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: 'easeInOut', 
+              delay: isBackgroundReady ? 1 : 1.5 
+            }}
             className="relative"
           >
             <h1 className={`${styles.heroHeadText} pt-4 text-white`}>
@@ -53,7 +72,7 @@ const Hero = () => {
             </p>
           </motion.div>
         </div>
-        <Avatar />
+        <Avatar isBackgroundReady={isBackgroundReady} />
       </div>
 
       <div className="absolute bottom-20 flex w-full items-center justify-center">
@@ -67,6 +86,7 @@ const Hero = () => {
                 duration: 1.5,
                 repeat: Infinity,
                 repeatType: 'loop',
+                delay: isBackgroundReady ? 0 : 0.5,
               }}
               className="flex items-center justify-center"
             >

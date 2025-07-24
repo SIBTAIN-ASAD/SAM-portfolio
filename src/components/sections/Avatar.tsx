@@ -1,12 +1,20 @@
 import { motion } from 'framer-motion';
 import { avatar } from '../../assets';
 
-const Avatar = () => {
+interface AvatarProps {
+  isBackgroundReady?: boolean;
+}
+
+const Avatar: React.FC<AvatarProps> = ({ isBackgroundReady = true }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: 'easeInOut', delay: 1 }}
+      transition={{ 
+        duration: 0.5, 
+        ease: 'easeInOut', 
+        delay: isBackgroundReady ? 1 : 1.5 
+      }}
       className="relative"
     >
       <div className="relative bottom-0 hidden md:block right-10">
