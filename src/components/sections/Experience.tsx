@@ -33,15 +33,23 @@ const ExperienceCard: React.FC<TExperience> = experience => {
         </div>
       }
     >
-      <h3 className="text-[24px] font-bold text-white">{experience.title}</h3>
-      <p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
+      <h3 className="text-[26px] sm:text-[28px] font-bold text-white leading-tight">
+        {experience.title}
+      </h3>
+      <p
+        className="text-secondary text-[17px] sm:text-[18px] font-semibold mt-1"
+        style={{ margin: 0 }}
+      >
         {experience.companyName}
       </p>
-      <ul className="ml-5 mt-5 list-disc space-y-2">
+      <p className="text-white-100/90 text-[15px] sm:text-[16px] mt-2 leading-relaxed">
+        {experience.description}
+      </p>
+      <ul className="ml-5 mt-5 list-disc space-y-3 sm:space-y-3.5 pl-1">
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className="text-white-100 pl-1 text-[14px] tracking-wider"
+            className="text-white-100 pl-1 text-[15px] sm:text-[16px] leading-relaxed tracking-wide"
           >
             {point}
           </li>
