@@ -24,13 +24,15 @@ import devsinc from './company/devsinc.jpeg';
 import Fiverr from './company/Fiverr.png';
 import upwork from './company/upwork.png';
 import i2c from './company/i2c.png';
+import navforward from './company/navforward.png';
+import turing from './company/turing.jpg';
 
 import healthcare from './projects/healthcare.png';
 import quora from './projects/quora.png';
 import subcold from './projects/subcold.png';
 import splitwise from './projects/splitwise.png';
 import hams from './projects/hams.png';
-import nexus from './projects/nexusin.jpeg';
+import nexus from './projects/nexusin.png';
 import burger from './projects/burger.png';
 import pythonMS from './projects/python.png';
 import figmaland from './projects/figmaland.png';
@@ -38,6 +40,7 @@ import tradingtracker from './projects/tradingtracker.png';
 import buybox from './projects/buybox.png';
 import forethought from './projects/forethought.png';
 import kubernetes from './projects/kubernetes.png';
+import navforwardProject from './projects/navforward.png';
 
 import aliDp from './people/Alidp.jpeg';
 
@@ -64,6 +67,8 @@ export {
   Fiverr,
   i2c,
   upwork,
+  navforward,
+  turing,
   healthcare,
   quora,
   splitwise,
@@ -80,4 +85,5 @@ export {
   forethought,
   kubernetes,
   verified_icon,
+  navforwardProject,
 };

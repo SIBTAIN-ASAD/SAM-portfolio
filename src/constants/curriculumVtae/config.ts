@@ -47,7 +47,9 @@ export const config: TConfig = {
   },
   hero: {
     name: 'Sibtain Asad',
-    p: ['Crafting innovative solutions with React, Django, and AI expertise.'],
+    p: [
+      'Senior Software Engineer — scalable backends, full-stack web, and data-driven platforms.',
+    ],
   },
   contact: {
     p: 'Get in touch',
@@ -68,7 +70,7 @@ export const config: TConfig = {
     about: {
       p: 'Introduction',
       h2: 'Overview.',
-      content: `I'm a skilled software developer with experience in TypeScript and JavaScript, specializing in React, Django, and REST. I excel in coding, problem-solving, and software design. Additionally, I have proficiency in AI, particularly reinforcement learning using TensorFlow and PyTorch, and experience with OpenAI Gym environments for experimentation. With a background in AWS, Azure, and Google Cloud Platform, I can architect scalable AI solutions in the cloud.`,
+      content: `Senior Software Engineer with 5+ years shipping backends and full-stack products in Python, Django, FastAPI, and React. I build APIs, Celery/Redis pipelines, and scraping at scale for global teams. Stack: React, MUI, REST, microservices, Postgres/Mongo, AWS, Docker, and CI/CD.`,
     },
     experience: {
       p: 'Accomplishments to Date',
@@ -81,8 +83,8 @@ export const config: TConfig = {
     works: {
       p: 'Professional Background',
       h2: 'Projects.',
-      content: `I have worked on a variety of projects, including a full-stack e-commerce platform, a Django REST API, and a React-based web application. I have also developed a reinforcement learning model for an AI game player and deployed it on AWS. My work has been recognized by clients and colleagues alike for its quality and innovation.`,
+      content: `30+ production apps for international clients—legal data & scraping, healthcare, AI workflows, and full-stack SaaS on Django, FastAPI, and React.`,
     },
   },
-  resume: 'https://drive.google.com/file/d/1_IpIboWHEMbehEjtz4XSoecWF-P4KDRG/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1FpxFWO3kiLjodKTPa6S4oUrpGiAlL2d7/view?usp=sharing',
 };
