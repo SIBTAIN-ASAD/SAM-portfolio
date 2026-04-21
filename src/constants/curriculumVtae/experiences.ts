@@ -16,7 +16,7 @@ const experiences: TExperience[] = [
       'Shipped reliable scrapers with retry pipelines, duplicate detection, and Docker-based environments; deployed on AWS alongside MySQL-backed APIs.',
       'Collaborated closely with US product and engineering to deliver production systems on schedule and align technical direction with business goals.',
     ],
-    description: 'Senior Software Engineer — NavForward (US Remote)',
+    description: 'Senior Software Engineer - NavForward (US Remote)',
   },
   {
     title: 'Software Engineer',
@@ -29,7 +29,7 @@ const experiences: TExperience[] = [
       'Built evaluation pipelines for LLM-based agent completion tasks, including dataset design, scoring, and iteration with stakeholders.',
       'Contributed to prompt engineering and refinement workflows to improve model outputs on real agent completion benchmarks.',
     ],
-    description: 'Software Engineer — Turing (Remote)',
+    description: 'Software Engineer - Turing (Remote)',
   },
   {
     title: 'Software Engineer',
@@ -44,7 +44,7 @@ const experiences: TExperience[] = [
       'Delivered features end-to-end in Agile teams with Jira, code review, and regular production releases.',
       'Partnered with cross-functional teams on Adobe authentication, Microsoft Dynamics, and referral workflows for healthcare clients.',
     ],
-    description: 'Software Engineer — Devsinc',
+    description: 'Software Engineer - Devsinc',
   },
   {
     title: 'Associate Software Engineer',
@@ -58,20 +58,20 @@ const experiences: TExperience[] = [
       'Worked closely with engineering teams to troubleshoot and resolve production issues across services and environments.',
       'Helped streamline handoffs between ops and development so recurring issues were fixed at the root.',
     ],
-    description: 'Associate Software Engineer — i2c',
+    description: 'Associate Software Engineer - i2c',
   },
   {
     title: 'Freelance Full Stack Engineer',
     companyName: 'Fiverr',
     icon: Fiverr,
     iconBg: '#383E56',
-    date: 'Mar 2022 – Present | Global clients',
+    date: 'Mar 2021 – Present | Global clients',
     points: [
       'Delivered many client projects on Fiverr: React and Django builds, AWS deployments, Firebase backends, and custom integrations including GraphQL and FastAPI where it improved UX.',
-      'Owned projects end to end—scoping, implementation, deployment—and kept delivery fast without sacrificing quality.',
+      'Owned projects end to end-scoping, implementation, deployment-and kept delivery fast without sacrificing quality.',
       'Earned strong repeat business and reviews through proactive communication and reliable turnaround.',
     ],
-    description: 'Freelance Full Stack Engineer — Fiverr',
+    description: 'Freelance Full Stack Engineer - Fiverr',
   },
   {
     title: 'Freelance Full Stack Engineer',
@@ -84,7 +84,7 @@ const experiences: TExperience[] = [
       'Used Git, Docker, and solid release practices so handoffs and long-term maintenance stayed straightforward.',
       'Collaborated with client teams on larger engagements: APIs, dashboards, and production-minded architecture.',
     ],
-    description: 'Freelance Full Stack Engineer — Upwork',
+    description: 'Freelance Full Stack Engineer - Upwork',
   },
 ];
 

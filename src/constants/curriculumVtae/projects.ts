@@ -21,15 +21,12 @@ const projects: TProject[] = [
   {
     name: 'Legal Data Intelligence Platform (NavForward)',
     description:
-      'Jun 2025 – Present. Scalable web scraping with Django, Selenium, and Celery; distributed pipelines with Redis; REST APIs for job data and workflows; retry pipelines, duplicate detection, Docker, AWS.',
+      'Scalable web scraping with Django, Selenium, and Celery; distributed pipelines with Redis; REST APIs for job data and workflows; retry pipelines, duplicate detection, Docker, AWS.',
     tags: [
-      { name: 'django', color: 'green-text-gradient' },
       { name: 'DRF', color: 'green-text-gradient' },
-      { name: 'celery', color: 'pink-text-gradient' },
       { name: 'redis', color: 'pink-text-gradient' },
       { name: 'selenium', color: 'blue-text-gradient' },
       { name: 'mysql', color: 'blue-text-gradient' },
-      { name: 'docker', color: 'blue-text-gradient' },
       { name: 'aws', color: 'pink-text-gradient' },
     ],
     image: navforwardProject,
@@ -38,7 +35,7 @@ const projects: TProject[] = [
   {
     name: 'AI-Powered Workflow Optimization',
     description:
-      'Sep 2024 – Mar 2025. Scalable workflow automation with FastAPI, MongoDB, and React; ML-driven decision pipelines; production APIs for high-volume internal tools and customer support automation.',
+      'Scalable workflow automation with FastAPI, MongoDB, and React; ML-driven decision pipelines; production APIs for high-volume internal tools and customer support automation.',
     tags: [
       { name: 'typescript', color: 'blue-text-gradient' },
       { name: 'mui', color: 'green-text-gradient' },
@@ -51,7 +48,7 @@ const projects: TProject[] = [
   {
     name: 'BuyBox',
     description:
-      'Dec 2024 – Jul 2025. Property rental and buy/sell platform using Django templates; browse properties, filter by location and price, manage listings. Django, AWS, Postgres.',
+      'Property rental and buy/sell platform using Django templates; browse properties, filter by location and price, manage listings. Django, AWS, Postgres.',
     tags: [
       { name: 'django', color: 'green-text-gradient' },
       { name: 'postgres', color: 'pink-text-gradient' },
@@ -63,7 +60,7 @@ const projects: TProject[] = [
   {
     name: 'Subcold Return Project',
     description:
-      'Oct 2024 – Jan 2025. Linnworks CRM integration with Django backend; React dashboard for data sync; secure APIs for external enterprise systems.',
+      'Linnworks CRM integration with Django backend; React dashboard for data sync; secure APIs for external enterprise systems.',
     tags: [
       { name: 'react', color: 'blue-text-gradient' },
       { name: 'django', color: 'green-text-gradient' },
@@ -75,7 +72,7 @@ const projects: TProject[] = [
   {
     name: 'Investment Tracker',
     description:
-      'Mar 2022 – May 2022. Web app to manage and track investments in stocks, ETFs, and cryptocurrencies. React and Django.',
+      'Web app to manage and track investments in stocks, ETFs, and cryptocurrencies. React and Django.',
     tags: [
       { name: 'react', color: 'blue-text-gradient' },
       { name: 'django', color: 'green-text-gradient' },
@@ -128,7 +125,7 @@ const projects: TProject[] = [
   {
     name: 'Healthcare Referral System',
     description:
-      'Mar 2024 – Oct 2024. Lead front-end with React and TypeScript; Adobe authentication and Microsoft Dynamics; patient referral workflows; enterprise healthcare platform for internal teams.',
+      'Lead front-end with React and TypeScript; Adobe authentication and Microsoft Dynamics; patient referral workflows; enterprise healthcare platform for internal teams.',
     tags: [
       { name: 'typescript', color: 'blue-text-gradient' },
       { name: 'mui', color: 'green-text-gradient' },

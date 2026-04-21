@@ -83,7 +83,7 @@ export const config: TConfig = {
     works: {
       p: 'Professional Background',
       h2: 'Projects.',
-      content: `30+ production apps for international clients—legal data & scraping, healthcare, AI workflows, and full-stack SaaS on Django, FastAPI, and React.`,
+      content: `30+ production apps for international clients legal data & scraping, healthcare, AI workflows, and full-stack SaaS on Django, FastAPI, and React.`,
     },
   },
   resume: 'https://drive.google.com/file/d/1FpxFWO3kiLjodKTPa6S4oUrpGiAlL2d7/view?usp=sharing',
