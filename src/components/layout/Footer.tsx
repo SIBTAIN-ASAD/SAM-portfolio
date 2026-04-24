@@ -82,7 +82,7 @@ const Footer = () => {
 
         <div className="text-center mt-6">
           <p className="text-sm">
-            &copy; {new Date().getFullYear()} Sibtain Asad Malik. All rights reserved.
+            &copy; {new Date().getFullYear()} Sibtain Asad. All rights reserved.
           </p>
         </div>
       </div>

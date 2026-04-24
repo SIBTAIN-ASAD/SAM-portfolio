@@ -51,7 +51,7 @@ export const config: TConfig = {
     email: 'sibtainasad50@gmail.com',
   },
   hero: {
-    name: 'Sibtain Asad Malik',
+    name: 'Sibtain Asad',
     p: [
       'Senior Software Engineer — scalable backends, full-stack web, and data-driven platforms.',
     ],

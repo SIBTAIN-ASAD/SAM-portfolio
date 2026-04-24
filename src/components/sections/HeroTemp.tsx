@@ -11,7 +11,6 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ isBackgroundReady = true }) => {
   return (
     <section className="h-screen w-full absolute z-10">
-      {/* Loading overlay to prevent flicker */}
       {!isBackgroundReady && (
         <motion.div
           initial={{ opacity: 1 }}
@@ -20,10 +19,15 @@ const Hero: React.FC<HeroProps> = ({ isBackgroundReady = true }) => {
           className="absolute inset-0 bg-primary z-20"
         />
       )}
-      
-      <div className={`absolute inset-0 mx-auto p-8 justify-evenly flex flex-row items-center`}>
-        <div className="relative p-3 pb-5 pl-1">
-          {/* Curtain Animation */}
+
+      <div className="absolute inset-0 mx-auto px-8 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
+        {/* Left Content Section */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: 'easeInOut', delay: isBackgroundReady ? 0.5 : 1 }}
+          className="flex-1 max-w-7xl"
+        >
           <motion.div
             initial={{ width: '100%', left: '0%' }}
             animate={{ width: '0%', left: '100%' }}
@@ -32,53 +36,48 @@ const Hero: React.FC<HeroProps> = ({ isBackgroundReady = true }) => {
             style={{ zIndex: 10 }}
           />
 
-          {/* Bottom Border */}
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: '50%' }}
-            transition={{
-              duration: 0.75,
-              ease: 'easeInOut',
-              delay: isBackgroundReady ? 0 : 0.5,
-            }}
-            className="absolute bottom-0 left-0 h-1 border-b-2 border-gray-700"
-            // style={{ borderBottom: '8px solid #acb8f7', borderRadius: '20%' }}
-          />
-
-          {/* Text Container */}
-          <motion.div
+          <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ 
-              duration: 0.5, 
-              ease: 'easeInOut', 
-              delay: isBackgroundReady ? 1 : 1.5 
-            }}
-            className="relative"
+            transition={{ duration: 0.5, delay: isBackgroundReady ? 0.8 : 1.3 }}
+            className="text-[#acb8f7] text-sm font-medium mb-4"
           >
-            <h1 className={`${styles.heroHeadText} pt-4 text-white`}>
-              Hi, I'm <span className="text-[#acb8f7]">{config.hero.name}</span>
-            </h1>
-            {/* <p className={`${styles.heroSubText} text-white-100 mt-2`}>
-              <Typewriter
-                words={['Senior Software Engineer', 'Full Stack Developer', 'AI Enthusiast']}
-                loop={false}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
-            </p> */}
+            Welcome to my portfolio
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: isBackgroundReady ? 1 : 1.5 }}
+            className={`${styles.heroHeadText} text-white mb-6`}
+          >
+            I'm <span className="text-[#acb8f7]">{config.hero.name}</span>
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: isBackgroundReady ? 1.2 : 1.7 }}
+            className={`${styles.heroSubText} text-gray-300 mb-8`}
+          >
+            <Typewriter
+              words={['Senior Software Engineer', 'Full Stack Developer', 'AI Enthusiast']}
+              loop={false}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: isBackgroundReady ? 1.3 : 1.8 }}
-            className="text-gray-400 text-base leading-relaxed my-8 max-w-md"
+            className="text-gray-400 text-base leading-relaxed mb-8 max-w-md"
           >
-            Backend-focused full-stack engineer working on APIs, distributed systems, and data workflows using Django, FastAPI, React, and AWS.
+            I craft beautiful, functional digital experiences. Let's work together to bring your ideas to life.
           </motion.p>
 
           <motion.div
@@ -88,7 +87,7 @@ const Hero: React.FC<HeroProps> = ({ isBackgroundReady = true }) => {
             className="flex flex-wrap gap-4"
           >
             <motion.a
-              href={`mailto:${config.contact.contactInfo.email}`}
+              href="mailto:your.email@example.com"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="px-8 py-3 rounded-lg bg-[#acb8f7] text-[#0a0f28] font-semibold hover:bg-[#b8c5ff] transition-colors duration-300"
@@ -116,7 +115,7 @@ const Hero: React.FC<HeroProps> = ({ isBackgroundReady = true }) => {
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.15 }}
-              className="text-gray-500 hover:text-[#0A66C2] transition-colors"
+              className="text-gray-500 hover:text-[#acb8f7] transition-colors"
               aria-label="LinkedIn"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
@@ -136,35 +135,36 @@ const Hero: React.FC<HeroProps> = ({ isBackgroundReady = true }) => {
               </svg>
             </motion.a>
             <motion.a
-              href={`https://wa.me/${config.contact.contactInfo.phone.replaceAll(/\D/g, '')}`}
+              href={config.contact.contactInfo.twitter}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.15 }}
-              className="text-gray-500 hover:text-[#25D366] transition-colors"
-              aria-label="WhatsApp"
+              className="text-gray-500 hover:text-[#acb8f7] transition-colors"
+              aria-label="Twitter"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="h-6 w-6"
-              >
-                <path d="M20.52 3.48A11.88 11.88 0 0012.06 0C5.4 0 .02 5.38.02 12.04c0 2.12.55 4.2 1.6 6.04L0 24l6.1-1.6a11.96 11.96 0 005.96 1.52h.01c6.66 0 12.04-5.38 12.04-12.04 0-3.21-1.25-6.23-3.59-8.4zM12.07 21.7c-1.8 0-3.57-.48-5.13-1.38l-.37-.22-3.62.95.97-3.53-.24-.36a9.7 9.7 0 01-1.49-5.15c0-5.37 4.37-9.74 9.74-9.74 2.6 0 5.05 1.01 6.89 2.85a9.66 9.66 0 012.85 6.89c0 5.37-4.37 9.74-9.74 9.74zm5.34-7.27c-.29-.14-1.73-.85-2-.94-.27-.1-.47-.14-.67.14-.2.29-.77.94-.95 1.13-.17.2-.35.22-.64.07-.29-.14-1.22-.45-2.32-1.44-.86-.77-1.44-1.73-1.61-2.02-.17-.29-.02-.45.13-.6.13-.13.29-.35.43-.52.14-.17.19-.29.29-.48.1-.2.05-.37-.02-.52-.07-.14-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.29-1.04 1.01-1.04 2.46s1.07 2.85 1.22 3.05c.14.2 2.11 3.22 5.11 4.52.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.73-.71 1.98-1.4.24-.7.24-1.3.17-1.4-.07-.1-.27-.17-.56-.31z" />
-            </svg>
-           </motion.a>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
+                <path d="M23.953 4.57a10 10 0 002.856-3.915 10 10 0 01-2.887.775 4.998 4.998 0 002.192-2.761c-.951.564-2.005.974-3.127 1.195a4.996 4.996 0 00-8.506 4.547A14.148 14.148 0 011.392 3.751a4.998 4.998 0 001.546 6.671 4.992 4.992 0 01-2.265-.567v.063a4.996 4.996 0 003.995 4.895 5 5 0 01-2.258.085 4.997 4.997 0 004.674 3.472A10.009 10.009 0 010 19.542a14.124 14.124 0 007.666 2.247c9.173 0 14.172-7.591 14.172-14.168 0-.216-.005-.432-.015-.648A10.012 10.012 0 0023.953 4.57z" />
+              </svg>
+            </motion.a>
           </motion.div>
+        </motion.div>
 
-        </div>
-        <Avatar isBackgroundReady={isBackgroundReady} />
+        {/* Right Image Section */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, ease: 'easeInOut', delay: isBackgroundReady ? 0.7 : 1.2 }}
+          className="flex-1 flex justify-center items-center relative"
+        >
+          <Avatar isBackgroundReady={isBackgroundReady} />
+        </motion.div>
       </div>
 
       <div className="absolute bottom-20 flex w-full items-center justify-center">
         <a href="#about">
           <div className="opacity-50">
             <motion.div
-              animate={{
-                y: [0, 15, 0],
-              }}
+              animate={{ y: [0, 15, 0] }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
@@ -180,12 +180,7 @@ const Hero: React.FC<HeroProps> = ({ isBackgroundReady = true }) => {
                 stroke="currentColor"
                 className="h-6 w-6 text-secondary"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="4"
-                  d="M19 9l-7 7-7-7"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M19 9l-7 7-7-7" />
               </svg>
             </motion.div>
           </div>

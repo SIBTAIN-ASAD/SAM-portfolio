@@ -43,6 +43,7 @@ import kubernetes from './projects/kubernetes.png';
 import navforwardProject from './projects/navforward.png';
 
 import aliDp from './people/Alidp.jpeg';
+import sibtainAsad from './people/sibtainasad.png'
 
 export {
   logo,
@@ -80,6 +81,7 @@ export {
   figmaland,
   tradingtracker,
   aliDp,
+  sibtainAsad,
   subcold,
   buybox,
   forethought,
