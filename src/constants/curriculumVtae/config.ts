@@ -29,6 +29,11 @@ type TConfig = {
         placeholder: string;
       };
     };
+    p: string;
+    h2: string;
+    contactInfo: {
+      [key: string]: string;
+    }
   } & TSection;
   sections: {
     about: Required<TSection>;
@@ -64,6 +69,16 @@ export const config: TConfig = {
         span: 'Your Message',
         placeholder: 'What do you want to say?',
       },
+    },
+    contactInfo:{
+      linkedIn: "https://www.linkedin.com/in/sibtain-asad/",
+      github: "https://github.com/SIBTAIN-ASAD/",
+      twitter: "https://twitter.com/sibtainasad",
+      instagram: "https://www.instagram.com/sibtain__malik/",
+      facebook: "https://facebook.com/Sibtainasad14",
+      discord: "https://discord.com/users/sibtain__malik",
+      email: "sibtainasad50@gmail.com",
+      phone: "+92 300 7501631",
     },
   },
   sections: {

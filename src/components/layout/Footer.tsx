@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaInstagram, FaFacebook, FaDiscord } from 'react-icons/fa';
 import { motion } from 'framer-motion';
+import { config } from '../../constants/curriculumVtae/config';
 
 const footerVariants = {
   hidden: { opacity: 0 },
@@ -36,32 +37,32 @@ const Footer = () => {
           {/* Left Side: Icons */}
           <div className="flex flex-col items-center md:items-start border-r border-gray-600 pr-6">
             <p className="text-lg mb-2 flex items-center">
-              <FaEnvelope className="mr-2" /> sibtainasad50@gmail.com
+              <FaEnvelope className="mr-2" /> {config.contact.contactInfo.email}
             </p>
             <div className="flex gap-4 mt-4">
               <a
-                href="https://www.linkedin.com/in/sibtain-asad/"
+                href={config.contact.contactInfo.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaLinkedin className="text-2xl hover:text-blue-500 transition-colors" />
               </a>
-              <a href="https://github.com/SIBTAIN-ASAD/" target="_blank" rel="noopener noreferrer">
+              <a href={config.contact.contactInfo.github} target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-2xl hover:text-gray-400 transition-colors" />
               </a>
-              <a href="https://twitter.com/sibtainasad" target="_blank" rel="noopener noreferrer">
+              <a href={config.contact.contactInfo.twitter} target="_blank" rel="noopener noreferrer">
                 <FaTwitter className="text-2xl hover:text-blue-400 transition-colors" />
               </a>
-              <a href="https://www.instagram.com/sibtain__malik/" target="_blank" rel="noopener noreferrer">
+              <a href={config.contact.contactInfo.instagram} target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="text-2xl hover:text-red-400 transition-colors" />
               </a>
-              <a href="https://facebook.com/Sibtainasad14" target="_blank" rel ="noopener noreferrer">
+              <a href={config.contact.contactInfo.facebook} target="_blank" rel ="noopener noreferrer">
                 <FaFacebook className="text-2xl hover:text-blue-400 transition-colors" />
               </a>
-              <a href="https://discord.com/users/sibtain__malik" target="_blank" rel="noopener noreferrer">
+              <a href={config.contact.contactInfo.discord} target="_blank" rel="noopener noreferrer">
                 <FaDiscord className="text-2xl hover:text-purple-400 transition-colors" />
               </a>
-              <a href="mailto:sibtainasad50@gmail.com" target="_blank" rel="noopener noreferrer">
+              <a href={`mailto:${config.contact.contactInfo.email}`} target="_blank" rel="noopener noreferrer">
                 <FaEnvelope className="text-2xl hover:text-blue-800 transition-colors" />
               </a>
 
@@ -72,8 +73,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end pl-6">
             <h2 className="text-xl font-semibold mb-2">Contact Info</h2>
             <p className="text-md mb-1">Lahore, Pakistan</p>
-            <p className="text-md mb-1">Phone: +92 300 7501631</p>
-            <p className="text-md">Email: sibtainasad50@gmail.com</p>
+            <p className="text-md mb-1">Phone: {config.contact.contactInfo.phone}</p>
           </div>
         </div>
 
