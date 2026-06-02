@@ -33,7 +33,7 @@ const projects: TProject[] = [
     sourceCodeLink: 'https://github.com/SIBTAIN-ASAD/',
   },
   {
-    name: 'AI-Powered Workflow Optimization',
+    name: 'NextThought - AI-Powered Workflow Optimization',
     description:
       'Scalable workflow automation with FastAPI, MongoDB, and React; ML-driven decision pipelines; production APIs for high-volume internal tools and customer support automation.',
     tags: [
