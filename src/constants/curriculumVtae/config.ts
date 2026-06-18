@@ -101,5 +101,5 @@ export const config: TConfig = {
       content: `30+ production apps for international clients legal data & scraping, healthcare, AI workflows, and full-stack SaaS on Django, FastAPI, and React.`,
     },
   },
-  resume: 'https://drive.google.com/file/d/19ET6ZNAgsMCUmu6dDFI-rsfMmTN5RJ8p/view?usp=sharing',
+  resume: 'https://drive.google.com/drive/folders/17eEQ15Ey0FpTRp01wXTNY74abXa0OCxC?usp=sharing',
 };

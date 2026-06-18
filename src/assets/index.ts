@@ -26,6 +26,7 @@ import upwork from './company/upwork.png';
 import i2c from './company/i2c.png';
 import navforward from './company/navforward.png';
 import turing from './company/turing.jpg';
+import qInformationHub from './company/qInformationHub.jpeg';
 
 import healthcare from './projects/healthcare.png';
 import quora from './projects/quora.png';
@@ -88,4 +89,5 @@ export {
   kubernetes,
   verified_icon,
   navforwardProject,
+  qInformationHub,
 };

@@ -1,6 +1,6 @@
 import type { TExperience } from '../../types';
 
-import { devsinc, Fiverr, upwork, i2c, navforward, turing } from '../../assets';
+import { devsinc, Fiverr, upwork, i2c, navforward, turing, qInformationHub } from '../../assets';
 
 const experiences: TExperience[] = [
   {
@@ -23,7 +23,7 @@ const experiences: TExperience[] = [
     companyName: 'Turing',
     icon: turing,
     iconBg: '#383E56',
-    date: 'Jun 2025 – Dec 2025 | Remote',
+    date: 'Jun 2025 – Dec 2025 | Remote (New York, USA)',
     points: [
       'Worked as an LLM trainer for AI agents, shaping model behavior and task completion quality across agent-style workflows.',
       'Built evaluation pipelines for LLM-based agent completion tasks, including dataset design, scoring, and iteration with stakeholders.',
@@ -36,7 +36,7 @@ const experiences: TExperience[] = [
     companyName: 'Devsinc',
     icon: devsinc,
     iconBg: '#E6DEDD',
-    date: 'Nov 2023 – Oct 2025 | Lahore, Pakistan',
+    date: 'Nov 2023 – Jun 2025 | Hybrid (Lahore, Pakistan)',
     points: [
       'Built full-stack enterprise platforms using React, Django, and FastAPI for healthcare and AI workflow products.',
       'Developed scalable REST APIs consumed by internal tools, integrations, and high-traffic frontends.',
@@ -51,7 +51,7 @@ const experiences: TExperience[] = [
     companyName: 'i2c',
     icon: i2c,
     iconBg: '#E6DEDD',
-    date: 'Sep 2023 – Nov 2023 | Lahore, Pakistan',
+    date: 'Sep 2023 – Nov 2023 | Onsite (Lahore, Pakistan)',
     points: [
       'Supported product operations and DevOps pipelines: deployments, releases, and operational runbooks.',
       'Maintained infrastructure monitoring, alerting, and deployment workflows to reduce downtime and speed up incident response.',
@@ -61,11 +61,25 @@ const experiences: TExperience[] = [
     description: 'Associate Software Engineer - i2c',
   },
   {
+    title: 'Software Engineer',
+    companyName: 'Q Informatiion Hub',
+    icon: qInformationHub,
+    iconBg: '#383E56',
+    date: 'Jun 2021 – Oct 2023 | Remote (Lahore, Pakistan)',
+    points: [
+      'Developed scalable web applications using React and Django for both internal tools and client platforms.',  
+      'Designed REST APIs to ensure clean service separation across multiple concurrent projects.',  
+      'Implemented JWT authentication and role-based access control (RBAC) for three user roles, enhancing security.',  
+      'Achieved a 25% reduction in API response times through PostgreSQL query and schema optimization.',
+    ],
+    description: 'Software Engineer - Q Informatiion Hub',
+  },
+  {
     title: 'Freelance Full Stack Engineer',
     companyName: 'Fiverr',
     icon: Fiverr,
     iconBg: '#383E56',
-    date: 'Mar 2021 – Present | Global clients',
+    date: 'Mar 2021 – Oct 2023 | Global clients',
     points: [
       'Delivered many client projects on Fiverr: React and Django builds, AWS deployments, Firebase backends, and custom integrations including GraphQL and FastAPI where it improved UX.',
       'Owned projects end to end-scoping, implementation, deployment-and kept delivery fast without sacrificing quality.',
@@ -78,7 +92,7 @@ const experiences: TExperience[] = [
     companyName: 'Upwork',
     icon: upwork,
     iconBg: '#E6DEDD',
-    date: 'Jun 2023 – Present | Global clients',
+    date: 'Jun 2020 – May 2023 | Global clients',
     points: [
       'Built and maintained web applications with React and Django for Upwork clients across REST APIs and third-party integrations.',
       'Used Git, Docker, and solid release practices so handoffs and long-term maintenance stayed straightforward.',
