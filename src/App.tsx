@@ -8,6 +8,7 @@ import {
   Feedbacks,
   Hero,
   Navbar,
+  OpenSource,
   StarsCanvas,
   Tech,
   Works,
@@ -41,6 +42,7 @@ const App: React.FC = () => {
         <Experience />
         {isMediumScreen && <Tech />}
         <Works />
+        <OpenSource />
         <Feedbacks />
         <div className="relative z-0">
           <Contact />

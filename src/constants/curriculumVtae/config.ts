@@ -40,6 +40,7 @@ type TConfig = {
     experience: TSection;
     feedbacks: TSection;
     works: Required<TSection>;
+    openSource: Required<TSection>;
   };
   resume: string;
 };
@@ -99,6 +100,12 @@ export const config: TConfig = {
       p: 'Professional Background',
       h2: 'Projects.',
       content: `30+ production apps for international clients legal data & scraping, healthcare, AI workflows, and full-stack SaaS on Django, FastAPI, and React.`,
+    },
+    openSource: {
+      p: 'Community Work',
+      h2: 'Open-source contributions.',
+      content:
+        'Focused fixes, regression tests, and developer-experience improvements across active Python and JavaScript projects.',
     },
   },
   resume: 'https://drive.google.com/drive/folders/17eEQ15Ey0FpTRp01wXTNY74abXa0OCxC?usp=sharing',
