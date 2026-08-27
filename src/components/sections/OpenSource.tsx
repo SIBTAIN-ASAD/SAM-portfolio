@@ -29,7 +29,7 @@ const contributions: Contribution[] = [
     summary:
       'Added allowlist checks, per-user session handling, streaming edit deduplication, and focused regression coverage for the Telegram adapter.',
     stack: ['Python', 'PyTest', 'Telegram'],
-    status: 'In review',
+    status: 'Approved · merge pending',
     statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
     url: 'https://github.com/amd/gaia/pull/3052',
   },
