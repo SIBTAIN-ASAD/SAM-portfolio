@@ -33,46 +33,6 @@ const contributions: Contribution[] = [
     statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
     url: 'https://github.com/amd/gaia/pull/3052',
   },
-  {
-    repository: 'rcarmo/piclaw',
-    title: 'Improve web UI build reliability',
-    summary:
-      'Delivered a contained frontend improvement with regression checks that passed the project build before the pull request was merged.',
-    stack: ['JavaScript', 'TypeScript', 'Frontend'],
-    status: 'Merged',
-    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
-    url: 'https://github.com/rcarmo/piclaw/pull/1034',
-  },
-  {
-    repository: 'Sam7214/KCL-portflio',
-    title: 'Refresh portfolio footer',
-    summary:
-      'Improved the portfolio footer presentation in a focused frontend contribution that was merged upstream.',
-    stack: ['JavaScript', 'React', 'UI'],
-    status: 'Merged',
-    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
-    url: 'https://github.com/Sam7214/KCL-portflio/pull/1',
-  },
-  {
-    repository: 'SIBTAIN-ASAD/SAM-portfolio',
-    title: 'Expand experience timeline',
-    summary:
-      'Updated the portfolio experience timeline with additional professional context in a merged documentation change.',
-    stack: ['JavaScript', 'React', 'Content'],
-    status: 'Merged',
-    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
-    url: 'https://github.com/SIBTAIN-ASAD/SAM-portfolio/pull/1',
-  },
-  {
-    repository: 'SIBTAIN-ASAD/Web-Project',
-    title: 'Deliver web project improvements',
-    summary:
-      'Shipped a focused web-project contribution that was accepted and merged into the public repository.',
-    stack: ['JavaScript', 'Web', 'Frontend'],
-    status: 'Merged',
-    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
-    url: 'https://github.com/SIBTAIN-ASAD/Web-Project/pull/1',
-  },
 ];
 
 const OpenSource = () => {
@@ -110,7 +70,7 @@ const OpenSource = () => {
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
               ['1', 'open PR'],
-              ['4', 'merged PRs'],
+              ['0', 'merged PRs'],
               ['9', 'focused tests passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
