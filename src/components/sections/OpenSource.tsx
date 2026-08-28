@@ -29,8 +29,8 @@ const contributions: Contribution[] = [
     summary:
       'Added allowlist checks, per-user session handling, streaming edit deduplication, and focused regression coverage for the Telegram adapter.',
     stack: ['Python', 'PyTest', 'Telegram'],
-    status: 'Approved · merge pending',
-    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    status: 'Merged · Aug 28, 2026',
+    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
     url: 'https://github.com/amd/gaia/pull/3052',
   },
   {
@@ -79,8 +79,8 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['1', 'open PR'],
-              ['1', 'merged PR'],
+              ['0', 'open PRs'],
+              ['2', 'merged PRs'],
               ['9', 'focused tests passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
@@ -105,7 +105,7 @@ const OpenSource = () => {
                   <span
                     className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold ${contribution.statusClass}`}
                   >
-                    {contribution.status === 'Merged' ? <FaCheckCircle /> : <FaCodeBranch />}
+                    {contribution.status.startsWith('Merged') ? <FaCheckCircle /> : <FaCodeBranch />}
                     {contribution.status}
                   </span>
                 </div>
