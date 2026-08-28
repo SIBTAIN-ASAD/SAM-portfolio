@@ -25,6 +25,16 @@ type Contribution = {
 const contributions: Contribution[] = [
   {
     repository: 'amd/gaia',
+    title: 'Add regression coverage for Telegram media ingest',
+    summary:
+      'Added focused adapter tests for photo processing and document-indexing failures, keeping uploaded-media context visible to the agent.',
+    stack: ['Python', 'PyTest', 'Telegram'],
+    status: 'Open · review pending',
+    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    url: 'https://github.com/amd/gaia/pull/3150',
+  },
+  {
+    repository: 'amd/gaia',
     title: 'Harden Telegram access and session isolation',
     summary:
       'Added allowlist checks, per-user session handling, streaming edit deduplication, and focused regression coverage for the Telegram adapter.',
@@ -79,7 +89,7 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['0', 'open PRs'],
+              ['1', 'open PR'],
               ['2', 'merged PRs'],
               ['9', 'focused tests passing'],
             ].map(([value, label]) => (
