@@ -27,9 +27,9 @@ const contributions: Contribution[] = [
     repository: 'amd/gaia',
     title: 'Add regression coverage for Telegram media ingest',
     summary:
-      'Added focused adapter tests for photo processing and document-indexing failures, keeping uploaded-media context visible to the agent.',
+      'Added focused adapter tests for all Telegram media outcomes. The seven-test adapter suite passes; two unrelated repository-wide CI failures remain under maintainer review.',
     stack: ['Python', 'PyTest', 'Telegram'],
-    status: 'Open · review pending',
+    status: 'Open · review pending · CI noted',
     statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
     url: 'https://github.com/amd/gaia/pull/3150',
   },
