@@ -53,16 +53,6 @@ const contributions: Contribution[] = [
     statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
     url: 'https://github.com/amd/gaia/pull/3052',
   },
-  {
-    repository: 'rcarmo/piclaw',
-    title: 'Restore the session tree viewer',
-    summary:
-      'Restored the visual session tree in the web UI and added focused frontend regression coverage; the change was merged upstream.',
-    stack: ['JavaScript', 'TypeScript', 'Frontend'],
-    status: 'Merged',
-    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
-    url: 'https://github.com/rcarmo/piclaw/pull/1034',
-  },
 ];
 
 const OpenSource = () => {
@@ -100,7 +90,7 @@ const OpenSource = () => {
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
               ['1', 'open PR'],
-              ['3', 'merged PRs'],
+              ['2', 'merged PRs'],
               ['11', 'focused tests passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
