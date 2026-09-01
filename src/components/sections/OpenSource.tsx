@@ -25,12 +25,22 @@ type Contribution = {
 const contributions: Contribution[] = [
   {
     repository: 'amd/gaia',
+    title: 'Make unsupported Telegram media feedback actionable',
+    summary:
+      'Added a clear supported-types message for video, voice, audio, sticker, animation, and video-note uploads, with regression coverage for the video path.',
+    stack: ['Python', 'PyTest', 'Telegram'],
+    status: 'Open · review pending',
+    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    url: 'https://github.com/amd/gaia/pull/3263',
+  },
+  {
+    repository: 'amd/gaia',
     title: 'Add regression coverage for Telegram media ingest',
     summary:
-      'Added focused adapter tests for all Telegram media outcomes. The seven-test adapter suite passes; two unrelated repository-wide CI failures remain under maintainer review.',
+      'Added focused adapter tests for all Telegram media outcomes; the change was merged upstream after the full adapter suite passed.',
     stack: ['Python', 'PyTest', 'Telegram'],
-    status: 'Open · review pending · CI noted',
-    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    status: 'Merged · Aug 31, 2026',
+    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
     url: 'https://github.com/amd/gaia/pull/3150',
   },
   {
@@ -90,8 +100,8 @@ const OpenSource = () => {
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
               ['1', 'open PR'],
-              ['2', 'merged PRs'],
-              ['9', 'focused tests passing'],
+              ['3', 'merged PRs'],
+              ['11', 'focused tests passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                 <p className="text-2xl font-black text-white">{value}</p>
