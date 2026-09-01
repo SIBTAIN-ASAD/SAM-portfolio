@@ -27,7 +27,7 @@ const contributions: Contribution[] = [
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
-      'Added a clear supported-types message for video, voice, audio, sticker, animation, and video-note uploads, with regression coverage for the video path.',
+      'Added a deterministic reply for unsupported video, voice, audio, sticker, animation, and video-note uploads, with parameterized regression coverage for every type.',
     stack: ['Python', 'PyTest', 'Telegram'],
     status: 'Open · review pending',
     statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
