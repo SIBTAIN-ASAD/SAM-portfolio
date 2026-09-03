@@ -27,10 +27,10 @@ const contributions: Contribution[] = [
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
-      'Added a deterministic reply for unsupported video, voice, audio, sticker, animation, and video-note uploads, with parameterized regression coverage for every type.',
+      'Added a deterministic reply for unsupported video, voice, audio, sticker, animation, and video-note uploads, with parameterized regression coverage for every type; merged upstream after CI passed.',
     stack: ['Python', 'PyTest', 'Telegram'],
-    status: 'Open · review pending',
-    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    status: 'Merged · Sep 2, 2026',
+    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
     url: 'https://github.com/amd/gaia/pull/3263',
   },
   {
@@ -89,9 +89,9 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['1', 'open PR'],
-              ['2', 'merged PRs'],
-              ['11', 'focused tests passing'],
+              ['0', 'open PRs'],
+              ['3', 'merged PRs'],
+              ['16', 'focused tests passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                 <p className="text-2xl font-black text-white">{value}</p>
