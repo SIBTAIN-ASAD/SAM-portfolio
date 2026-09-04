@@ -27,9 +27,9 @@ const contributions: Contribution[] = [
     repository: 'celery/celery',
     title: 'Prevent Signature.clone() kwargs aliasing',
     summary:
-      'Deep-copied signature kwargs so cloned Celery tasks stay independent, with regression coverage for nested values; focused tests and compile checks pass while maintainer CI runs.',
+      'Deep-copied signature kwargs so cloned Celery tasks stay independent, with regression coverage for nested values; focused tests, compile checks, and visible GitHub checks pass while review is pending.',
     stack: ['Python', 'Celery', 'PyTest'],
-    status: 'Open · review pending',
+    status: 'Open · checks passing',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/celery/celery/pull/10561',
   },
