@@ -27,7 +27,7 @@ const contributions: Contribution[] = [
     repository: 'celery/celery',
     title: 'Prevent Signature.clone() kwargs aliasing',
     summary:
-      'Deep-copied signature kwargs so cloned Celery tasks stay independent, with regression coverage for nested values, override paths, and lazy group generators.',
+      'Deep-copied signature kwargs so cloned Celery tasks stay independent, with regression coverage for nested values, override paths, lazy group generators, and map-style canvas signatures.',
     stack: ['Python', 'Celery', 'PyTest'],
     status: 'Open · review follow-up',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
