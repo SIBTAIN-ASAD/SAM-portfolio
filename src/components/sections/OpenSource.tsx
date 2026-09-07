@@ -24,14 +24,14 @@ type Contribution = {
 
 const contributions: Contribution[] = [
   {
-    repository: 'celery/celery',
-    title: 'Prevent Signature.clone() kwargs aliasing',
+    repository: 'apache/airflow',
+    title: 'Defer templated DateTimeSensorAsync targets until rendering',
     summary:
-      'Deep-copied signature kwargs so cloned Celery tasks stay independent, with regression coverage for nested values, override paths, lazy group generators, map-style canvas signatures, arbitrary containers, and cycles.',
-    stack: ['Python', 'Celery', 'PyTest'],
-    status: 'Open · review follow-up',
+      'Prevents a Jinja expression from being parsed as a datetime during Dag parsing. Concrete targets still start from the triggerer, while templated targets use the worker path after rendering, with focused regression coverage.',
+    stack: ['Python', 'Airflow', 'PyTest'],
+    status: 'Open · review required',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
-    url: 'https://github.com/celery/celery/pull/10561',
+    url: 'https://github.com/apache/airflow/pull/72659',
   },
   {
     repository: 'amd/gaia',
@@ -101,7 +101,7 @@ const OpenSource = () => {
             {[
               ['1', 'open PRs'],
               ['3', 'merged PRs'],
-              ['17', 'focused tests passing'],
+              ['16', 'focused tests passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                 <p className="text-2xl font-black text-white">{value}</p>
