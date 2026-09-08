@@ -29,7 +29,7 @@ const contributions: Contribution[] = [
     summary:
       'Adds a public MutableHttpRequest helper for test request factories, keeping Django\'s runtime HttpRequest while exposing mutable QueryDict attributes to type checkers after mypy 2.2 changed __new__ handling.',
     stack: ['Python', 'Django', 'Mypy'],
-    status: 'Open · checks pending',
+    status: 'Open · fixes pushed; CI pending',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/typeddjango/django-stubs/pull/3642',
   },
