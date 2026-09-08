@@ -24,6 +24,16 @@ type Contribution = {
 
 const contributions: Contribution[] = [
   {
+    repository: 'typeddjango/django-stubs',
+    title: 'Add a mutable HttpRequest typing helper',
+    summary:
+      'Adds a public MutableHttpRequest helper for test request factories, keeping Django\'s runtime HttpRequest while exposing mutable QueryDict attributes to type checkers after mypy 2.2 changed __new__ handling.',
+    stack: ['Python', 'Django', 'Mypy'],
+    status: 'Open · checks pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    url: 'https://github.com/typeddjango/django-stubs/pull/3642',
+  },
+  {
     repository: 'apache/airflow',
     title: 'Defer templated DateTimeSensorAsync targets until rendering',
     summary:
@@ -99,9 +109,9 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['1', 'open PRs'],
+              ['2', 'open PRs'],
               ['3', 'merged PRs'],
-              ['16', 'focused tests passing'],
+              ['36', 'focused checks passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
                 <p className="text-2xl font-black text-white">{value}</p>
