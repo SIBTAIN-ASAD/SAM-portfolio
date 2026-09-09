@@ -27,10 +27,10 @@ const contributions: Contribution[] = [
     repository: 'typeddjango/django-stubs',
     title: 'Add a mutable HttpRequest typing helper',
     summary:
-      'Adds a public MutableHttpRequest helper for test request factories, keeping Django\'s runtime HttpRequest while exposing mutable QueryDict attributes to type checkers after mypy 2.2 changed __new__ handling.',
+      'Adds a public MutableHttpRequest helper for test request factories, keeping Django\'s runtime HttpRequest while exposing mutable QueryDict attributes to type checkers after mypy 2.2 changed __new__ handling; merged upstream after review fixes and full checks passed.',
     stack: ['Python', 'Django', 'Mypy'],
-    status: 'Open · fixes pushed; pre-commit passed',
-    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    status: 'Merged · Sep 9, 2026',
+    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
     url: 'https://github.com/typeddjango/django-stubs/pull/3642',
   },
   {
@@ -109,8 +109,8 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['2', 'open PRs'],
-              ['3', 'merged PRs'],
+              ['1', 'open PRs'],
+              ['4', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
