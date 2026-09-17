@@ -47,9 +47,9 @@ const contributions: Contribution[] = [
     repository: 'kubernetes/website',
     title: 'Remove a redundant heading from the Pod Certificates post',
     summary:
-      'Removed a duplicated H2 from the Kubernetes v1.37 Pod Certificates and Cluster Trust Bundles article so the page metadata title is the single visible heading before the introduction. Hugo build verification is pending in the upstream CI environment.',
+      'Removed a duplicated H2 from the Kubernetes v1.37 Pod Certificates and Cluster Trust Bundles article so the page metadata title is the single visible heading before the introduction. The Netlify preview built successfully; EasyCLA authorization is still pending.',
     stack: ['Kubernetes', 'Markdown', 'Documentation'],
-    status: 'Open · checks pending',
+    status: 'Open · CLA pending',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/kubernetes/website/pull/57586',
   },
