@@ -44,6 +44,16 @@ const contributions: Contribution[] = [
     url: 'https://github.com/apache/airflow/pull/72659',
   },
   {
+    repository: 'kubernetes/website',
+    title: 'Remove a redundant heading from the Pod Certificates post',
+    summary:
+      'Removed a duplicated H2 from the Kubernetes v1.37 Pod Certificates and Cluster Trust Bundles article so the page metadata title is the single visible heading before the introduction. Hugo build verification is pending in the upstream CI environment.',
+    stack: ['Kubernetes', 'Markdown', 'Documentation'],
+    status: 'Open · checks pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    url: 'https://github.com/kubernetes/website/pull/57586',
+  },
+  {
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
@@ -109,7 +119,7 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['1', 'open PRs'],
+              ['2', 'open PRs'],
               ['4', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
