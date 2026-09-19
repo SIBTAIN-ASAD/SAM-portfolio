@@ -54,6 +54,16 @@ const contributions: Contribution[] = [
     url: 'https://github.com/kubernetes/website/pull/57586',
   },
   {
+    repository: 'pytest-dev/pytest',
+    title: 'Keep bracketed custom item names in --last-failed',
+    summary:
+      'Preserves canonical string node IDs so custom collectors whose item names contain brackets are not silently skipped by --last-failed. Added focused regression coverage and a changelog entry; local tests and Ruff pass while the upstream matrix completes.',
+    stack: ['Python', 'PyTest', 'Testing'],
+    status: 'Open · CI pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    url: 'https://github.com/pytest-dev/pytest/pull/15065',
+  },
+  {
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
@@ -119,7 +129,7 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['2', 'open PRs'],
+              ['3', 'open PRs'],
               ['4', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
