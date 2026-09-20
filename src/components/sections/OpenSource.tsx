@@ -39,8 +39,8 @@ const contributions: Contribution[] = [
     summary:
       'Prevents a Jinja expression from being parsed as a datetime during Dag parsing. Concrete targets still start from the triggerer, while templated targets use the worker path after rendering, with focused regression coverage.',
     stack: ['Python', 'Airflow', 'PyTest'],
-    status: 'Open · review required',
-    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    status: 'Merged · Sep 20, 2026',
+    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
     url: 'https://github.com/apache/airflow/pull/72659',
   },
   {
@@ -139,8 +139,8 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['4', 'open PRs'],
-              ['4', 'merged PRs'],
+              ['3', 'open PRs'],
+              ['5', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
