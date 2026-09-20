@@ -59,7 +59,7 @@ const contributions: Contribution[] = [
     summary:
       'Preserves canonical string node IDs so custom collectors whose item names contain brackets are not silently skipped by --last-failed. Added focused regression coverage and a changelog entry; local tests and Ruff pass while the upstream matrix completes.',
     stack: ['Python', 'PyTest', 'Testing'],
-    status: 'Open · CI pending',
+    status: 'Open · review pending',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/pytest-dev/pytest/pull/15065',
   },
