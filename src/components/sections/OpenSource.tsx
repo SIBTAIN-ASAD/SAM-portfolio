@@ -64,16 +64,6 @@ const contributions: Contribution[] = [
     url: 'https://github.com/pytest-dev/pytest/pull/15065',
   },
   {
-    repository: 'numpy/numpy',
-    title: 'Document RandomState multinomial compatibility',
-    summary:
-      'Documented the legacy RandomState.multinomial stream restored in NumPy 2.5.0, including the seeded-result differences users may see across NumPy 1.17–2.4. The change is documentation-only and keeps runtime behavior unchanged.',
-    stack: ['Python', 'NumPy', 'Documentation'],
-    status: 'Open · CI pending',
-    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
-    url: 'https://github.com/numpy/numpy/pull/32712',
-  },
-  {
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
@@ -139,7 +129,7 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['3', 'open PRs'],
+              ['2', 'open PRs'],
               ['5', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
