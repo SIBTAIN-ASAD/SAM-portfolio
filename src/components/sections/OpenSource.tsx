@@ -44,16 +44,6 @@ const contributions: Contribution[] = [
     url: 'https://github.com/apache/airflow/pull/72659',
   },
   {
-    repository: 'kubernetes/website',
-    title: 'Remove a redundant heading from the Pod Certificates post',
-    summary:
-      'Removed a duplicated H2 from the Kubernetes v1.37 Pod Certificates and Cluster Trust Bundles article so the page metadata title is the single visible heading before the introduction. The Netlify preview built successfully; EasyCLA authorization is still pending.',
-    stack: ['Kubernetes', 'Markdown', 'Documentation'],
-    status: 'Open · CLA pending',
-    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
-    url: 'https://github.com/kubernetes/website/pull/57586',
-  },
-  {
     repository: 'pytest-dev/pytest',
     title: 'Keep bracketed custom item names in --last-failed',
     summary:
@@ -129,7 +119,7 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['2', 'open PRs'],
+              ['1', 'open PRs'],
               ['5', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
