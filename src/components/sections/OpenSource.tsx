@@ -54,6 +54,16 @@ const contributions: Contribution[] = [
     url: 'https://github.com/pytest-dev/pytest/pull/15065',
   },
   {
+    repository: 'matplotlib/matplotlib',
+    title: 'Document WSL GUI backend setup',
+    summary:
+      'Adds a focused backend-guide section explaining how WSLg supplies the display environment, how to inspect the selected backend, and when to use the non-interactive Agg backend in headless WSL environments. Open for upstream review.',
+    stack: ['Python', 'Matplotlib', 'Sphinx'],
+    status: 'Open · review pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    url: 'https://github.com/matplotlib/matplotlib/pull/32386',
+  },
+  {
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
@@ -119,7 +129,7 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['1', 'open PRs'],
+              ['2', 'open PRs'],
               ['5', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
