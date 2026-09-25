@@ -118,62 +118,64 @@ const OpenSource = () => {
         </p>
       </div>
 
-      <div className="mt-12">
-        <div className="rounded-2xl border border-[#33488d] bg-[#070b18]/80 p-6 shadow-lg sm:p-8">
-          <div className="mb-6 flex flex-wrap items-start justify-between gap-4">
+      <div className="mt-10">
+        <div className="rounded-2xl border border-[#33488d]/70 bg-[#070b18]/80 p-4 shadow-lg sm:p-6">
+          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
             <div>
-              <p className="text-sm uppercase tracking-[0.22em] text-secondary">
+              <p className="text-[11px] uppercase tracking-[0.24em] text-secondary">
                 Contribution highlights
               </p>
-              <h3 className="mt-2 text-2xl font-bold text-white">Selected pull requests</h3>
+              <h3 className="mt-1 text-xl font-bold text-white sm:text-2xl">Selected pull requests</h3>
             </div>
             <a
               href="https://github.com/SIBTAIN-ASAD"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white transition hover:border-[#535C91] hover:bg-white/5"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1.5 text-xs font-semibold text-white transition hover:border-[#535C91] hover:bg-white/5 sm:text-sm"
             >
               <FaGithub /> View GitHub
             </a>
           </div>
 
-          <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="mb-5 grid grid-cols-3 gap-2">
             {[
               ['3', 'open PRs'],
               ['5', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
-              <div key={label} className="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                <p className="text-2xl font-black text-white">{value}</p>
-                <p className="mt-1 text-xs uppercase tracking-wider text-secondary">{label}</p>
+              <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
+                <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
+                <p className="mt-0.5 text-[9px] uppercase leading-4 tracking-[0.12em] text-secondary sm:text-[10px]">{label}</p>
               </div>
             ))}
           </div>
 
-          <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             {contributions.map((contribution, index) => (
               <motion.article
                 key={contribution.url}
-                variants={fadeIn('up', 'spring', index * 0.12, 0.5)}
-                className="rounded-xl border border-white/10 bg-[#0d1326] p-5 transition hover:border-[#535C91]"
+                variants={fadeIn('up', 'spring', index * 0.06, 0.35)}
+                className="group rounded-xl border border-white/10 bg-[#0d1326] p-4 transition hover:-translate-y-0.5 hover:border-[#535C91] hover:bg-[#111a34]"
               >
-                <div className="flex flex-wrap items-start justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-semibold text-[#8b96d8]">{contribution.repository}</p>
-                    <h4 className="mt-1 text-lg font-bold text-white">{contribution.title}</h4>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="truncate text-xs font-semibold text-[#8b96d8]">{contribution.repository}</p>
+                    <h4 className="mt-1 line-clamp-2 text-base font-bold leading-5 text-white">{contribution.title}</h4>
                   </div>
                   <span
-                    className={`inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold ${contribution.statusClass}`}
+                    className={`shrink-0 whitespace-nowrap rounded-full border px-2 py-1 text-[10px] font-semibold sm:text-xs ${contribution.statusClass}`}
                   >
-                    {contribution.status.startsWith('Merged') ? <FaCheckCircle /> : <FaCodeBranch />}
-                    {contribution.status}
+                    <span className="inline-flex items-center gap-1.5">
+                      {contribution.status.startsWith('Merged') ? <FaCheckCircle /> : <FaCodeBranch />}
+                      {contribution.status.replace(' · review pending', '').replace(' · checks pending', '')}
+                    </span>
                   </span>
                 </div>
-                <p className="mt-3 text-sm leading-6 text-secondary">{contribution.summary}</p>
-                <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-                  <div className="flex flex-wrap gap-2">
+                <p className="mt-2 line-clamp-2 text-xs leading-5 text-secondary sm:text-sm">{contribution.summary}</p>
+                <div className="mt-3 flex items-center justify-between gap-3">
+                  <div className="flex min-w-0 flex-wrap gap-1.5">
                     {contribution.stack.map(item => (
-                      <span key={item} className="rounded-md bg-white/5 px-2 py-1 text-xs text-slate-300">
+                      <span key={item} className="rounded-md bg-white/5 px-2 py-1 text-[10px] text-slate-300 sm:text-xs">
                         {item}
                       </span>
                     ))}
@@ -182,7 +184,7 @@ const OpenSource = () => {
                     href={contribution.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-[#aab2ef]"
+                    className="inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold text-white transition group-hover:text-[#aab2ef] sm:text-sm"
                   >
                     View PR <FaExternalLinkAlt className="text-xs" />
                   </a>
