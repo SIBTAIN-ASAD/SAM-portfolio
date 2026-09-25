@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaCheckCircle,
   FaCodeBranch,
   FaExternalLinkAlt,
   FaGithub,
+  FaChevronDown,
 } from 'react-icons/fa';
 import { Header } from '../atoms/Header';
 import { SectionWrapper } from '../../hoc';
@@ -105,8 +106,19 @@ const contributions: Contribution[] = [
   },
 ];
 
+const projectGroups = contributions.reduce<Array<{ repository: string; items: Contribution[] }>>(
+  (groups, contribution) => {
+    const existing = groups.find(group => group.repository === contribution.repository);
+    if (existing) existing.items.push(contribution);
+    else groups.push({ repository: contribution.repository, items: [contribution] });
+    return groups;
+  },
+  [],
+);
+
 const OpenSource = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const [openRepository, setOpenRepository] = useState<string | null>(null);
 
   return (
     <>
@@ -150,47 +162,71 @@ const OpenSource = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-            {contributions.map((contribution, index) => (
-              <motion.article
-                key={contribution.url}
-                variants={fadeIn('up', 'spring', index * 0.06, 0.35)}
-                className="group rounded-xl border border-white/10 bg-[#0d1326] p-4 transition hover:-translate-y-0.5 hover:border-[#535C91] hover:bg-[#111a34]"
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="truncate text-xs font-semibold text-[#8b96d8]">{contribution.repository}</p>
-                    <h4 className="mt-1 line-clamp-2 text-base font-bold leading-5 text-white">{contribution.title}</h4>
-                  </div>
-                  <span
-                    className={`shrink-0 whitespace-nowrap rounded-full border px-2 py-1 text-[10px] font-semibold sm:text-xs ${contribution.statusClass}`}
+          <div className="space-y-2">
+            <p className="mb-3 text-xs text-secondary">Select a project to explore the individual contributions.</p>
+            {projectGroups.map((group, index) => {
+              const mergedCount = group.items.filter(item => item.status.startsWith('Merged')).length;
+              const isOpen = openRepository === group.repository;
+              const stacks = Array.from(new Set(group.items.flatMap(item => item.stack))).slice(0, 4);
+
+              return (
+                <motion.div
+                  key={group.repository}
+                  variants={fadeIn('up', 'spring', index * 0.06, 0.35)}
+                  className={`overflow-hidden rounded-xl border transition ${isOpen ? 'border-[#535C91] bg-[#0d1326]' : 'border-white/10 bg-[#0b1020] hover:border-[#535C91]/70'}`}
+                >
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    onClick={() => setOpenRepository(isOpen ? null : group.repository)}
+                    className="flex w-full items-center gap-3 p-3 text-left sm:p-4"
                   >
-                    <span className="inline-flex items-center gap-1.5">
-                      {contribution.status.startsWith('Merged') ? <FaCheckCircle /> : <FaCodeBranch />}
-                      {contribution.status.replace(' · review pending', '').replace(' · checks pending', '')}
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#535C91]/15 text-[#aab2ef]">
+                      <FaGithub />
                     </span>
-                  </span>
-                </div>
-                <p className="mt-2 line-clamp-2 text-xs leading-5 text-secondary sm:text-sm">{contribution.summary}</p>
-                <div className="mt-3 flex items-center justify-between gap-3">
-                  <div className="flex min-w-0 flex-wrap gap-1.5">
-                    {contribution.stack.map(item => (
-                      <span key={item} className="rounded-md bg-white/5 px-2 py-1 text-[10px] text-slate-300 sm:text-xs">
-                        {item}
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-sm font-semibold text-white sm:text-base">{group.repository}</span>
+                      <span className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 text-[10px] uppercase tracking-[0.12em] text-secondary sm:text-xs">
+                        <span>{group.items.length} {group.items.length === 1 ? 'contribution' : 'contributions'}</span>
+                        <span className="text-emerald-300/80">{mergedCount} merged</span>
+                        {mergedCount < group.items.length && <span className="text-sky-300/80">{group.items.length - mergedCount} in review</span>}
                       </span>
-                    ))}
-                  </div>
-                  <a
-                    href={contribution.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex shrink-0 items-center gap-1.5 text-xs font-semibold text-white transition group-hover:text-[#aab2ef] sm:text-sm"
-                  >
-                    View PR <FaExternalLinkAlt className="text-xs" />
-                  </a>
-                </div>
-              </motion.article>
-            ))}
+                    </span>
+                    <span className="hidden items-center gap-1.5 sm:flex">
+                      {stacks.map(stack => <span key={stack} className="rounded-md bg-white/5 px-2 py-1 text-[10px] text-slate-300">{stack}</span>)}
+                    </span>
+                    <FaChevronDown className={`shrink-0 text-xs text-secondary transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  {isOpen && (
+                    <div className="border-t border-white/10 px-3 pb-3 sm:px-4 sm:pb-4">
+                      <div className="grid gap-2 pt-3">
+                        {group.items.map(contribution => (
+                          <article key={contribution.url} className="rounded-lg border border-white/10 bg-[#111a34]/70 p-3">
+                            <div className="flex items-start justify-between gap-3">
+                              <h4 className="text-sm font-semibold leading-5 text-white">{contribution.title}</h4>
+                              <span className={`shrink-0 whitespace-nowrap rounded-full border px-2 py-1 text-[10px] font-semibold ${contribution.statusClass}`}>
+                                {contribution.status.startsWith('Merged') ? <FaCheckCircle className="mr-1 inline" /> : <FaCodeBranch className="mr-1 inline" />}
+                                {contribution.status.replace(' · review pending', '').replace(' · checks pending', '')}
+                              </span>
+                            </div>
+                            <p className="mt-2 text-xs leading-5 text-secondary sm:text-sm">{contribution.summary}</p>
+                            <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
+                              <div className="flex flex-wrap gap-1.5">
+                                {contribution.stack.map(item => <span key={item} className="rounded-md bg-white/5 px-2 py-1 text-[10px] text-slate-300 sm:text-xs">{item}</span>)}
+                              </div>
+                              <a href={contribution.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-semibold text-white transition hover:text-[#aab2ef] sm:text-sm">
+                                View PR <FaExternalLinkAlt className="text-xs" />
+                              </a>
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
