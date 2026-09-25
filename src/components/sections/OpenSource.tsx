@@ -64,6 +64,16 @@ const contributions: Contribution[] = [
     url: 'https://github.com/matplotlib/matplotlib/pull/32386',
   },
   {
+    repository: 'scipy/scipy',
+    title: 'Support split Fortran sequential subrecords',
+    summary:
+      'Adds support for the signed continuation markers emitted by gfortran and Intel for large sequential records, validates each subrecord, and covers the format with a synthetic regression fixture. Open for upstream review.',
+    stack: ['Python', 'SciPy', 'NumPy'],
+    status: 'Open · checks pending',
+    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    url: 'https://github.com/scipy/scipy/pull/26270',
+  },
+  {
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
@@ -129,7 +139,7 @@ const OpenSource = () => {
 
           <div className="mb-7 grid grid-cols-1 gap-3 sm:grid-cols-3">
             {[
-              ['2', 'open PRs'],
+              ['3', 'open PRs'],
               ['5', 'merged PRs'],
               ['36', 'focused checks passing'],
             ].map(([value, label]) => (
