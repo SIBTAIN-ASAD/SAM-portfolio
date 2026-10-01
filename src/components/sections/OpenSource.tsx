@@ -45,16 +45,6 @@ const contributions: Contribution[] = [
     url: 'https://github.com/apache/airflow/pull/72659',
   },
   {
-    repository: 'pytest-dev/pytest',
-    title: 'Keep bracketed custom item names in --last-failed',
-    summary:
-      'Preserves canonical string node IDs so custom collectors whose item names contain brackets are not silently skipped by --last-failed. Added focused regression coverage and a changelog entry; local tests, Ruff, the upstream matrix, and Codecov are green while review is pending.',
-    stack: ['Python', 'PyTest', 'Testing'],
-    status: 'Open · review pending',
-    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
-    url: 'https://github.com/pytest-dev/pytest/pull/15065',
-  },
-  {
     repository: 'matplotlib/matplotlib',
     title: 'Document WSL GUI backend setup',
     summary:
@@ -151,9 +141,9 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['3', 'open PRs'],
+              ['2', 'open PRs'],
               ['5', 'merged PRs'],
-              ['36', 'focused checks passing'],
+              ['30', 'focused checks passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
