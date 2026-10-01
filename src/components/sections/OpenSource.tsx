@@ -68,10 +68,10 @@ const contributions: Contribution[] = [
     repository: 'scipy/scipy',
     title: 'Support split Fortran sequential subrecords',
     summary:
-      'Adds support for the signed continuation markers emitted by gfortran and Intel for large sequential records, validates each subrecord, and covers the format with a synthetic regression fixture. Open for upstream review.',
+      'Adds support for the signed continuation markers emitted by gfortran and Intel for large sequential records, validates each subrecord, and covers the format with a synthetic regression fixture. All observed required checks pass; review is pending.',
     stack: ['Python', 'SciPy', 'NumPy'],
-    status: 'Open · checks pending',
-    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    status: 'Open · review pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/scipy/scipy/pull/26270',
   },
   {
