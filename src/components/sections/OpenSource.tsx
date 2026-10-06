@@ -65,6 +65,16 @@ const contributions: Contribution[] = [
     url: 'https://github.com/scipy/scipy/pull/26270',
   },
   {
+    repository: 'PyCQA/isort',
+    title: 'Support f-strings in sorted literals',
+    summary:
+      'Extends literal sorting to preserve f-string source while ordering by rendered content, with direct and end-to-end regression coverage for list directives. The focused unit suite and local quality checks pass; upstream review is pending.',
+    stack: ['Python', 'AST', 'PyTest'],
+    status: 'Open · review pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    url: 'https://github.com/PyCQA/isort/pull/2716',
+  },
+  {
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
@@ -141,9 +151,9 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['2', 'open PRs'],
+              ['3', 'open PRs'],
               ['5', 'merged PRs'],
-              ['30', 'focused checks passing'],
+              ['35', 'focused checks passing'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
