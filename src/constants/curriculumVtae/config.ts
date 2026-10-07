@@ -86,7 +86,7 @@ export const config: TConfig = {
     about: {
       p: 'Introduction',
       h2: 'Overview.',
-      content: `Senior Software Engineer with 5+ years shipping backends and full-stack products in Python, Django, FastAPI, and React. I build APIs, Celery/Redis pipelines, and scraping at scale for global teams. Stack: React, MUI, REST, microservices, Postgres/Mongo, AWS, Docker, and CI/CD.`,
+      content: `Senior Software Engineer with 6+ years shipping backends and full-stack products in Python, Django, FastAPI, and React. I build APIs, Celery/Redis pipelines, and scraping at scale for global teams. Stack: React, MUI, REST, microservices, Postgres/Mongo, AWS, Docker, and CI/CD.`,
     },
     experience: {
       p: 'Accomplishments to Date',
