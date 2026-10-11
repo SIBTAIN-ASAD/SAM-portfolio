@@ -55,16 +55,6 @@ const contributions: Contribution[] = [
     url: 'https://github.com/matplotlib/matplotlib/pull/32386',
   },
   {
-    repository: 'typescript-eslint/typescript-eslint',
-    title: 'Keep optional tuple suggestions valid TypeScript',
-    summary:
-      'Updates the unnecessary-type-parameters suggestion to parenthesize union and function constraints before an optional tuple marker, preventing invalid TS17019 output. Focused rule tests, formatting, lint, and the eslint-plugin typecheck pass; upstream CI and review are in progress.',
-    stack: ['TypeScript', 'ESLint', 'Vitest'],
-    status: 'Open · checks pending',
-    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
-    url: 'https://github.com/typescript-eslint/typescript-eslint/pull/13003',
-  },
-  {
     repository: 'scipy/scipy',
     title: 'Support split Fortran sequential subrecords',
     summary:
@@ -161,9 +151,9 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['4', 'open PRs'],
+              ['3', 'open PRs'],
               ['5', 'merged PRs'],
-              ['35', 'focused checks passing'],
+              ['6', 'established projects'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
