@@ -75,6 +75,16 @@ const contributions: Contribution[] = [
     url: 'https://github.com/PyCQA/isort/pull/2716',
   },
   {
+    repository: 'Tencent/teamai-cli',
+    title: 'Honor custom Muse data directories in dashboard metrics',
+    summary:
+      'Updates Muse session discovery to respect XDG_DATA_HOME while retaining the standard ~/.local/share fallback, with regression coverage for relocated session logs. Open for upstream review; the focused tests, type-check, lint, and build pass.',
+    stack: ['TypeScript', 'Node.js', 'Vitest'],
+    status: 'Open · checks pending',
+    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    url: 'https://github.com/Tencent/teamai-cli/pull/1142',
+  },
+  {
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
@@ -151,9 +161,9 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['3', 'open PRs'],
+              ['4', 'open PRs'],
               ['5', 'merged PRs'],
-              ['6', 'established projects'],
+              ['7', 'established projects'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
