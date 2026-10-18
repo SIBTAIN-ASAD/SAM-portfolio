@@ -68,10 +68,10 @@ const contributions: Contribution[] = [
     repository: 'PyCQA/isort',
     title: 'Support f-strings in sorted literals',
     summary:
-      'Extends literal sorting to preserve f-string source while ordering by rendered content, with direct and end-to-end regression coverage for list directives. A maintainer review point is addressed; refreshed upstream checks are running.',
+      'Extends literal sorting to preserve f-string source while ordering by rendered content, with direct and end-to-end regression coverage for list directives. A maintainer review point is addressed and the refreshed upstream checks pass.',
     stack: ['Python', 'AST', 'PyTest'],
-    status: 'Open · checks pending',
-    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    status: 'Open · review pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/PyCQA/isort/pull/2716',
   },
   {
