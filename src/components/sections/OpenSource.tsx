@@ -85,6 +85,16 @@ const contributions: Contribution[] = [
     url: 'https://github.com/apache/datafusion-ballista/pull/2620',
   },
   {
+    repository: 'hashicorp/hcl',
+    title: 'Improve diagnostics for indices past collection length',
+    summary:
+      'Makes list and tuple indices beyond the exact boundary use HCL\'s specific out-of-range diagnostic instead of the generic invalid-key message, with regression coverage for empty and non-empty sequences. The full Go suite passes; upstream review is gated on the contributor agreement.',
+    stack: ['Go', 'HCL', 'cty'],
+    status: 'Open · CLA pending',
+    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    url: 'https://github.com/hashicorp/hcl/pull/856',
+  },
+  {
     repository: 'amd/gaia',
     title: 'Make unsupported Telegram media feedback actionable',
     summary:
@@ -161,9 +171,9 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['4', 'open PRs'],
+              ['5', 'open PRs'],
               ['5', 'merged PRs'],
-              ['7', 'established projects'],
+              ['8', 'established projects'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
@@ -217,7 +227,7 @@ const OpenSource = () => {
                               <h4 className="text-sm font-semibold leading-5 text-white">{contribution.title}</h4>
                               <span className={`shrink-0 whitespace-nowrap rounded-full border px-2 py-1 text-[10px] font-semibold ${contribution.statusClass}`}>
                                 {contribution.status.startsWith('Merged') ? <FaCheckCircle className="mr-1 inline" /> : <FaCodeBranch className="mr-1 inline" />}
-                                {contribution.status.replace(' · review pending', '').replace(' · checks pending', '')}
+                                {contribution.status.replace(' · review pending', '').replace(' · checks pending', '').replace(' · CLA pending', '')}
                               </span>
                             </div>
                             <p className="mt-2 text-xs leading-5 text-secondary sm:text-sm">{contribution.summary}</p>
