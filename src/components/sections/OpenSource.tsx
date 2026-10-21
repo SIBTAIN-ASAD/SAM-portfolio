@@ -85,14 +85,14 @@ const contributions: Contribution[] = [
     url: 'https://github.com/apache/datafusion-ballista/pull/2620',
   },
   {
-    repository: 'hashicorp/hcl',
-    title: 'Improve diagnostics for indices past collection length',
+    repository: 'pytest-dev/pluggy',
+    title: 'Keep declined entry points out of distribution listings',
     summary:
-      'Makes list and tuple indices beyond the exact boundary use HCL\'s specific out-of-range diagnostic instead of the generic invalid-key message, with regression coverage for empty and non-empty sequences. The full Go suite passes; upstream review is gated on the contributor agreement.',
-    stack: ['Go', 'HCL', 'cty'],
-    status: 'Open · CLA pending',
-    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
-    url: 'https://github.com/hashicorp/hcl/pull/856',
+      'Uses the name returned by plugin registration when tracking entry point distributions, and skips bookkeeping when registration declines a plugin. Regression coverage includes null, declined, and renamed registrations; the complete upstream CI matrix is green.',
+    stack: ['Python', 'PyTest', 'Plugins'],
+    status: 'Open · review pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    url: 'https://github.com/pytest-dev/pluggy/pull/809',
   },
   {
     repository: 'amd/gaia',
