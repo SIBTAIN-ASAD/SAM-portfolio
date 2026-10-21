@@ -90,9 +90,19 @@ const contributions: Contribution[] = [
     summary:
       'Uses the name returned by plugin registration when tracking entry point distributions, and skips bookkeeping when registration declines a plugin. Regression coverage includes null, declined, and renamed registrations; the complete upstream CI matrix is green.',
     stack: ['Python', 'PyTest', 'Plugins'],
+    status: 'Merged · Oct 21, 2026',
+    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
+    url: 'https://github.com/pytest-dev/pluggy/pull/809',
+  },
+  {
+    repository: 'apache/lucenenet',
+    title: 'Modernize contributor issue routing',
+    summary:
+      'Routes how-to and project questions to the repository\'s enabled GitHub Discussions area, aligns the contributor guide with the issue chooser, and assigns Bug, Feature, or Task types to every issue form. Open for upstream review.',
+    stack: ['GitHub', 'YAML', 'Lucene.NET'],
     status: 'Open · review pending',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
-    url: 'https://github.com/pytest-dev/pluggy/pull/809',
+    url: 'https://github.com/apache/lucenenet/pull/1506',
   },
   {
     repository: 'amd/gaia',
@@ -172,8 +182,8 @@ const OpenSource = () => {
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
               ['5', 'open PRs'],
-              ['5', 'merged PRs'],
-              ['8', 'established projects'],
+              ['6', 'merged PRs'],
+              ['9', 'established projects'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
