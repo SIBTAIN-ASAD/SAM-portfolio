@@ -68,7 +68,7 @@ const contributions: Contribution[] = [
     repository: 'PyCQA/isort',
     title: 'Support f-strings in sorted literals',
     summary:
-      'Extends literal sorting to preserve f-string source while ordering by rendered content, with direct and end-to-end regression coverage for list directives. A maintainer review point is addressed and the refreshed upstream checks pass.',
+      'Extends literal sorting to preserve f-string source while ordering by rendered content, with direct and end-to-end regression coverage for list directives. A maintainer review point is addressed, the branch is current with upstream, and refreshed checks pass.',
     stack: ['Python', 'AST', 'PyTest'],
     status: 'Open · review pending',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
@@ -78,10 +78,10 @@ const contributions: Contribution[] = [
     repository: 'apache/datafusion-ballista',
     title: 'Preserve AQE stages when transitions fail',
     summary:
-      'Computes resolve and rollback transitions before replacing the current stage, so a conversion error cannot remove valid scheduler state. The focused diff check passes and upstream review is pending.',
+      'Computes resolve and rollback transitions before replacing the current stage, so a conversion error cannot remove valid scheduler state. The complete observed upstream check suite passes and review is pending.',
     stack: ['Rust', 'DataFusion', 'Ballista'],
-    status: 'Open · checks pending',
-    statusClass: 'text-amber-300 border-amber-300/30 bg-amber-300/10',
+    status: 'Open · review pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/apache/datafusion-ballista/pull/2620',
   },
   {
@@ -98,11 +98,21 @@ const contributions: Contribution[] = [
     repository: 'apache/lucenenet',
     title: 'Modernize contributor issue routing',
     summary:
-      'Routes how-to and project questions to the repository\'s enabled GitHub Discussions area, aligns the contributor guide with the issue chooser, and assigns Bug, Feature, or Task types to every issue form. Open for upstream review.',
+      'Routes how-to and project questions through GitHub Discussions, the mailing list, and Stack Overflow in the maintainer-requested order, aligns the contributor guide with the issue chooser, and assigns Bug, Feature, or Task types to every issue form. Review feedback is addressed.',
     stack: ['GitHub', 'YAML', 'Lucene.NET'],
     status: 'Open · review pending',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/apache/lucenenet/pull/1506',
+  },
+  {
+    repository: 'nodejs/citgm',
+    title: 'Refresh ESLint maintainer contacts',
+    summary:
+      'Updates the ESLint lookup entry to use the current Technical Steering Committee members confirmed by the project, replacing inactive contacts so compatibility failures reach the responsible maintainers. The full 320-test suite and lint checks pass.',
+    stack: ['Node.js', 'JavaScript', 'CITGM'],
+    status: 'Open · review pending',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    url: 'https://github.com/nodejs/citgm/pull/1214',
   },
   {
     repository: 'amd/gaia',
@@ -181,9 +191,9 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['5', 'open PRs'],
+              ['6', 'open PRs'],
               ['6', 'merged PRs'],
-              ['9', 'established projects'],
+              ['10', 'established projects'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
