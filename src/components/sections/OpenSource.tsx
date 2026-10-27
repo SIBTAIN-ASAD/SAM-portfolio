@@ -75,16 +75,6 @@ const contributions: Contribution[] = [
     url: 'https://github.com/PyCQA/isort/pull/2716',
   },
   {
-    repository: 'apache/datafusion-ballista',
-    title: 'Preserve AQE stages when transitions fail',
-    summary:
-      'Computes resolve and rollback transitions before replacing the current stage, so a conversion error cannot remove valid scheduler state. The complete observed upstream check suite passes and review is pending.',
-    stack: ['Rust', 'DataFusion', 'Ballista'],
-    status: 'Open · review pending',
-    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
-    url: 'https://github.com/apache/datafusion-ballista/pull/2620',
-  },
-  {
     repository: 'pytest-dev/pluggy',
     title: 'Keep declined entry points out of distribution listings',
     summary:
@@ -201,9 +191,9 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['6', 'open PRs'],
+              ['5', 'open PRs'],
               ['7', 'merged PRs'],
-              ['11', 'established projects'],
+              ['10', 'established projects'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
