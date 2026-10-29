@@ -108,10 +108,10 @@ const contributions: Contribution[] = [
     repository: 'mdn/content',
     title: 'Explain the typographic rationale for text-autospace',
     summary:
-      'Explains why mixed CJK and Latin or numeric text may need automatic spacing, clarifies that the property avoids source-level whitespace, and links the relevant W3C Chinese and Japanese layout guidance. Repository formatting, spelling, file, xref, and URL checks pass; review is pending.',
+      'Explains why mixed CJK and Latin or numeric text may need automatic spacing, clarifies that the property avoids source-level whitespace, and links the relevant W3C Chinese and Japanese layout guidance. The documentation was merged upstream after maintainer review and an interactive-example update.',
     stack: ['CSS', 'MDN', 'Documentation'],
-    status: 'Open · review pending',
-    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    status: 'Merged · Oct 28, 2026',
+    statusClass: 'text-emerald-300 border-emerald-300/30 bg-emerald-300/10',
     url: 'https://github.com/mdn/content/pull/46251',
   },
   {
@@ -191,8 +191,8 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['5', 'open PRs'],
-              ['7', 'merged PRs'],
+              ['4', 'open PRs'],
+              ['8', 'merged PRs'],
               ['10', 'established projects'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
