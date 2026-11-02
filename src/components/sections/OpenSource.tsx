@@ -95,6 +95,16 @@ const contributions: Contribution[] = [
     url: 'https://github.com/apache/lucenenet/pull/1506',
   },
   {
+    repository: 'celery/celery',
+    title: 'Document dynamic task replacement workflows',
+    summary:
+      'Explains how bound tasks can replace themselves with runtime-built Celery canvases, adds a concrete group-and-callback example, and clarifies task ID and link preservation, unevaluated signatures, immediate return, and non-blocking behavior. All six upstream checks pass; review is pending.',
+    stack: ['Python', 'Celery', 'Sphinx'],
+    status: 'Open · checks passing',
+    statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
+    url: 'https://github.com/celery/celery/pull/11000',
+  },
+  {
     repository: 'nodejs/citgm',
     title: 'Refresh ESLint maintainer contacts',
     summary:
@@ -191,9 +201,9 @@ const OpenSource = () => {
 
           <div className="mb-5 grid grid-cols-3 gap-2">
             {[
-              ['4', 'open PRs'],
+              ['5', 'open PRs'],
               ['8', 'merged PRs'],
-              ['10', 'established projects'],
+              ['11', 'established projects'],
             ].map(([value, label]) => (
               <div key={label} className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2.5">
                 <p className="text-xl font-black text-white sm:text-2xl">{value}</p>
