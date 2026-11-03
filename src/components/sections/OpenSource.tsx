@@ -98,7 +98,7 @@ const contributions: Contribution[] = [
     repository: 'celery/celery',
     title: 'Document dynamic task replacement workflows',
     summary:
-      'Explains how bound tasks can replace themselves with runtime-built Celery canvases, adds a concrete group-and-callback example, and clarifies task ID and link preservation, unevaluated signatures, immediate return, and non-blocking behavior. A maintainer synchronized the branch with main, the refreshed checks pass, and review is requested.',
+      'Explains runtime-built Celery canvases with a group-and-callback example. Review feedback moved the section after the chord introduction, documented chord-capable backend and bare-group behavior, and clarified worker versus eager replacement semantics. Read the Docs and pre-commit pass on 260d8a3; maintainer review remains pending.',
     stack: ['Python', 'Celery', 'Sphinx'],
     status: 'Open · review requested',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
