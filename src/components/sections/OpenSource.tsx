@@ -98,9 +98,9 @@ const contributions: Contribution[] = [
     repository: 'celery/celery',
     title: 'Document dynamic task replacement workflows',
     summary:
-      'Explains runtime-built Celery canvases with a group-and-callback example. Review feedback moved the section after the chord introduction, documented chord-capable backend and bare-group behavior, and clarified worker versus eager replacement semantics. Read the Docs and pre-commit pass on 260d8a3; maintainer review remains pending.',
+      'Explains runtime-built Celery canvases with a group-and-callback example. Review feedback moved the section after the chord introduction, documented chord-capable backend and bare-group behavior, and clarified worker versus eager replacement semantics. A maintainer approved the synchronized head e6dc8ce, and all six current checks pass; merge remains pending.',
     stack: ['Python', 'Celery', 'Sphinx'],
-    status: 'Open · review requested',
+    status: 'Approved · pending merge',
     statusClass: 'text-sky-300 border-sky-300/30 bg-sky-300/10',
     url: 'https://github.com/celery/celery/pull/11000',
   },
